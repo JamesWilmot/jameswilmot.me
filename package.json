@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "jameswilmot.me",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",

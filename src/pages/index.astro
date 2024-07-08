@@ -1,99 +1,260 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'My Astro Blog';
+import PdfLink from '../components/links/pdf.astro';
+import GitHubLink from '../components/links/github.astro';
+import StravaLink from '../components/links/strava.astro';
+
+import Location from '../components/links/location.astro';
+
+import CommunityItem from './index/CommunityItem.astro';
+
+const title = 'James Wilmot';
 const description = 'The perfect starter for your perfect blog.';
 const permalink = Astro.site.href;
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
-  <div class="home-container">
-    <div class="home-copy">
-      <h1>Welcome to your new Astro Blog</h1>
-      <p>Check out the docs on <a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a> to get started.</p>
-    </div>
+  <section class="home-banner">
+    <div class="me" style="background-image: url('/assets/photos/me-banner.jpg');"></div>
+    <div class="container">
+      <div class="copy">
+        <h1>Hello, I’m James</h1>
+        <p class="sub">
+          &hellip; and I've been & done a little of everything.
+        <p>
+        Lorem ipsum dolor sit amet, consectetur <a href="#professional">my work</a>adipiscing elit. Ut non eros ac
+          nibh laoreet sollicitudin sed sit amet leo. Nam mauris nisi,
+          condimentum nec scelerisque sed, consequat non neque. Nullam vestibulum
+          quam id libero ultricies, id sollicitudin ligula pharetra. Nulla
+          fringilla tellus a faucibus fermentum. Aenean nec justo tortor.
+          Curabitur vitae dui metus. Mauris arcu odio, maximus bibendum justo at,
+          dapibus pulvinar lorem.
 
-    <div class="hero-image-container">
-      <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)">
-        <img class="hero-image" alt="Illustration of person reading a book" src="/assets/home-illustration-small.webp" width="550" height="466">
-      </picture>
-      <p class="caption">
-        Illustration by
-        <a href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6" target="_blank" rel="noopener">Icons 8</a>
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a>
-      </p>
+        <p> 
+        Etiam suscipit molestie lorem id auctor. <a href="#community">community</a>Curabitur hendrerit bibendum
+          placerat. Praesent risus libero, semper eu leo sagittis, bibendum
+          vestibulum purus. Donec eu velit vel dolor imperdiet convallis. Proin
+          ut auctor nisl.
+        <p>
+        Sed nec pharetra ligula <a href="#adventure">adventure</a>. Nulla convallis magna sed diam sodales, nec
+        convallis nulla aliquet. Integer tempus tortor at ex pellentesque
+        viverra. Curabitur ut lacus non justo semper aliquet. Ut in velit
+        pharetra, gravida tellus id, vehicula tellus. Phasellus maximus nulla in
+        augue eleifend convallis. Quisque ac gravida massa. Nunc at ipsum mattis,
+        viverra nibh sed, laoreet justo.
+
+        <p>
+        And I aspire to work a summer in Antartica with the 
+        <a href="https://www.antarctica.gov.au/" target="_blank">Australian Antarctic Program</a>.
+        <Location>Canberra, Australia</Location>
+      </div>
+      <div class="links">
+        <ul>
+          <li>
+            <PdfLink href="https://raw.githubusercontent.com/JamesWilmot/JamesWilmot-Resume/master/professional/James%20Wilmot%20Resume.pdf" target="_blank">Professional resumé</PdfLink>
+          </li>
+          <li>
+            <GitHubLink href="https://github.com/JamesWilmot" target="_blank">JamesWilmot</GitHubLink>
+          </li>
+          </li>
+            <StravaLink href="https://www.strava.com/athletes/22238062" target="_blank">James Wilmot</StravaLink>
+          <li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </section>
+  <section id="professional">
+    <h1>My work</h1>
+  </section>
+  <section id="community">
+    <div class="container">
+      <div class="main">
+      <h1>Community</h1>
+      <CommunityItem 
+             place="Canberra makerspace"
+             position="Executive & community member"
+             humanDates="Oct 2021–<em>present</em>"
+             location="Giralang, Canberra"
+             >
+      </CommunityItem>
+      <CommunityItem 
+             place="#thirstyworkcbr"
+             humanDates="Jun 2014–Dec 2016"
+             location="Canberra"
+             >
+      </CommunityItem>
+      </div>
+      <aside>
+        <CommunityItem 
+               place="Y's-buys"
+               position="Volunteer shop attendant"
+               humanDates="Aug 2018–Mar 2020"
+               location="Belconnen, Canberra"
+               >
+        </CommunityItem>
+        <CommunityItem 
+               place="The Lab"
+               position="Mentor"
+               humanDates="Jun 2014–Dec 2016"
+               location="Dee Why, Sydney"
+               >
+        </CommunityItem>
+        <CommunityItem 
+               place="Code Rangers"
+               position="Assistant teacher"
+               humanDates="Apr 2016–Nov 2016"
+               location="Sydney"
+               >
+        </CommunityItem>
+        <CommunityItem 
+               place="State Emergency Service"
+               position="Rescue Volunteer"
+               humanDates="Mar 2012–Jun 2014"
+               location="Randwick, Sydney"
+               >
+           <em>Qualifications</em>:
+          <ul>
+            <li>Senior First Aid</li>
+            <li>Storm and Water Rescue</li>
+            <li>Maintaining Team Safety</li>
+            <li>General Rescue</li>
+            <li>Radio Operation</li>
+            <li>4WD Operation</li>
+          </ul>
+        </CommunityItem>
+        <CommunityItem 
+               place="Primary Ethics"
+               position="Volunteer facilitator"
+               humanDates="Mar 2013–Dec 2014"
+               location="Daceyville, Sydney"
+               >
+          test
+        </CommunityItem>
+        <CommunityItem 
+               place="Shack Tutoring"
+               position="Volunteer tutor"
+               humanDates="2008"
+               location="UNSW Sydney"
+               >
+          <em>NSW HSC Subjects</em>:
+          <ul>
+           <li>
+             2 unit & extension 1 mathematics
+           </li>
+            <li>
+              Physics
+            </li>
+            <li>
+              Chemistry
+             </li>
+          </ul>
+        </CommunityItem>
+      </aside>
+    </div>
+  </section>
+  <section id="adventure">
+    <h1>Adventure</h1>
+  </section>
 </BaseLayout>
 
 <style>
-  .home-container {
-    align-items: center;
+  section.home-banner {
+    --gap: 4ch;
+    height: 100vh;
     display: flex;
+    gap: var(--gap);
+    max-height: 1080px;
+  }
+
+  .links, address.location {
+    font-size: 0.8em;
+  }
+
+  .links ul {
+    margin: 0;
+    padding: 0;
+  }
+  .links ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  .links ul li:not(:last-child):after {
+    content:"—";
+  }
+
+  section.home-banner .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     flex: 1;
-    justify-content: center;
-    margin: 2em 0;
-    min-height: 400px;
   }
 
-  .home-copy {
-    flex: 1;
-    padding: 0 1em;
+  section.home-banner .links {
+    margin-top: auto;
+    margin-bottom: 3em;
   }
 
-  .home-copy h1 {
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
+  section.home-banner .copy {
+    margin: auto 0;
+    padding-right: 8ch;
   }
 
-  .home-copy p {
-    font-size: 1.4em;
-  }
-
-  .hero-image-container {
-    margin: 0 1em;
-    text-align: center;
-  }
-
-  .hero-image-container picture {
-    display: block;
-    min-height: 250px;
-  }
-
-  .caption {
-    font-size: .8em;
-    font-style: italic;
-    text-align: left;
-  }
-
-  .hero-image {
+  section {
     width: 100%;
-    max-width: 550px;
-    margin-bottom: 1em;
+    padding: 1em 2ch;
   }
 
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
-    }
-
-    .hero-image {
-      max-width: 400px;
-    }
+  section#professional, section#adventure {
+    height: 95vh;
   }
 
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
+  section#community .container {
+    --gap: 4ch;
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+  }
 
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-      text-align: center;
-    }
+
+  section#community .container .main {
+    flex: 1;
+  }
+
+  section#community .container aside {
+    flex: 1;
+    columns: 2;
+    column-gap: 4ch;
+  }
+
+  section#community li {
+    margin: 0;
+  }
+
+  section:not(:last-child) {
+    border-bottom: 1px dashed #bdbdbd;
+  }
+
+  address .icon {
+    height: 1em;
+  }
+
+  section.home-banner .me {
+    height: 100%;
+    flex: 1;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  section.home-banner .copy p.sub {
+    margin-top: 0;
+    margin-bottom: 3em;
+  }
+
+  section.home-banner .copy h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+    font-feature-settings: 'ss08' 1, 'ss07' 1;
   }
 </style>

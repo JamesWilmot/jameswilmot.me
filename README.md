@@ -1,4 +1,4 @@
-# [Astro](https://astro.build) Blog Template
+# [jameswilmot.me](https://jameswilmot.me) website repository
 
 [![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
 
