@@ -26,6 +26,7 @@
           # dependencies for grip markdown viewer
           pkgs.python310
           pkgs.python310.pkgs.grip
+          pkgs.imagemagick
         ];
       };
     });
