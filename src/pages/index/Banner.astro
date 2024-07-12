@@ -1,0 +1,122 @@
+---
+import Location from '@components/links/location.astro';
+import PdfLink from '@components/links/pdf.astro';
+import GitHubLink from '@components/links/github.astro';
+import StravaLink from '@components/links/strava.astro';
+
+import './Section.scss';
+---
+<section id="banner">
+  <div class="me">
+    <img src="/assets/photos/me-high.webp" />
+  </div>
+  <div class="container">
+    <div class="copy">
+      <h1>Hello, I’m James</h1>
+      <p class="sub">
+        &hellip; and I've been & done a little of everything.
+      <p>
+      Lorem ipsum dolor sit amet, consectetur <a href="#professional">my work</a>adipiscing elit. Ut non eros ac
+        nibh laoreet sollicitudin sed sit amet leo. Nam mauris nisi,
+        condimentum nec scelerisque sed, consequat non neque. Nullam vestibulum
+        quam id libero ultricies, id sollicitudin ligula pharetra. Nulla
+        fringilla tellus a faucibus tfermentum. Aenean nec justo tortor.
+        Curabitur vitae dui metus. Mauris arcu odio, maximus bibendum justo at,
+        dapibus pulvinar lorem.
+
+      <p> 
+      Etiam suscipit molestie lorem id auctor. <a href="#community">community</a>Curabitur hendrerit bibendum
+        placerat. Praesent risus libero, semper eu leo sagittis, bibendum
+        vestibulum purus. Donec eu velit vel dolor imperdiet convallis. Proin
+        ut auctor nisl.
+      <p>
+      Sed nec pharetra ligula <a href="#adventure">adventure</a>. Nulla convallis magna sed diam sodales, nec
+      convallis nulla aliquet. Integer tempus tortor at ex pellentesque
+      viverra. Curabitur ut lacus non justo semper aliquet. Ut in velit
+      pharetra, gravida tellus id, vehicula tellus. Phasellus maximus nulla in
+      augue eleifend convallis. Quisque ac gravida massa. Nunc at ipsum mattis,
+      viverra nibh sed, laoreet justo.
+
+      <p>
+      I partner with driven and talented people, teams and organisations to produce extraordinary outcomes.
+
+      <p>
+      And I aspire to work a summer in Antartica with the 
+      <a href="https://www.antarctica.gov.au/" target="_blank">Australian Antarctic Program</a>.
+      <Location>Canberra, Australia</Location>
+    </div>
+    <div class="links">
+      <ul>
+        <li>
+          <PdfLink href="https://raw.githubusercontent.com/JamesWilmot/JamesWilmot-Resume/master/professional/James%20Wilmot%20Resume.pdf" target="_blank">Professional resumé</PdfLink>
+        </li>
+        <li>
+          <GitHubLink href="https://github.com/JamesWilmot" target="_blank">JamesWilmot</GitHubLink>
+        </li>
+        </li>
+          <StravaLink href="https://www.strava.com/athletes/22238062" target="_blank">James Wilmot</StravaLink>
+        <li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+section#banner {
+  --gap: 4ch;
+  height: 100vh;
+  display: flex;
+  gap: var(--gap);
+  max-height: 1080px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+  }
+
+  .me {
+    flex: 1;
+    img {
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .links, address.location {
+    font-size: 0.8em;
+  }
+  .links {
+    margin-top: auto;
+    margin-bottom: 1em;
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      &:not(:last-child):after {
+        content:"—";
+      }
+    }
+  }
+  .copy {
+    margin: auto 0;
+    padding-right: 8ch;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0;
+      font-feature-settings: 'ss08' 1, 'ss07' 1;
+    }
+    p.sub {
+      margin-top: 0;
+      margin-bottom: 3em;
+    }
+  }
+}
+</style>

@@ -1,0 +1,34 @@
+---
+import './Section.scss';
+import Map from '@components/Map';
+---
+
+<section id="adventure">
+  <div class="container">
+    <div class="mapbox">
+      <div style="height: 100%; width: 100%; position: relative;">
+        <Map client:load style="display: block; height: 100%; width: 100%;"/>
+      </div>
+    </div>
+    <div class="copy">
+      <h1>Adventure</h1>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+section#adventure {
+  height: 95vh;
+  .container {
+    height: 100%;
+    display: flex;
+    gap: 4ch;
+  }
+  .mapbox {
+    flex: 4;
+  }
+  .copy {
+    flex: 3;
+  }
+}
+</style>

@@ -1,0 +1,140 @@
+---
+import './Section.scss';
+
+import CommunityItem from './CommunityItem.astro';
+import InstagramLink from '@components/links/instagram.astro';
+---
+<section id="community">
+  <div class="container">
+    <div class="main">
+    <h1>Community</h1>
+    <CommunityItem 
+           place="Canberra Makerspace"
+           position="Executive & community member"
+           humanDates="Oct 2021–<em>present</em>"
+           location="Giralang, Canberra"
+           >
+      <p>
+      <em><a href="https://canberramaker.space/">Canberra Makerspace</a> is a community run multi-use workshop and meeting space in Giralang.</em>
+      </p>
+    </CommunityItem>
+    <CommunityItem 
+           place="#thirstyworkcbr"
+           humanDates="Feb 2022–<em>present</em>"
+           location="Canberra"
+           >
+           <InstagramLink href="https://www.instagram.com/explore/tags/thirstyworkcbr/" target="_blank">#thirstyworkcbr</InstagramLink>
+    </CommunityItem>
+    </div>
+    <aside>
+      <CommunityItem 
+             place="Y's-buys"
+             position="Volunteer shop attendant"
+             humanDates="Aug 2018–Mar 2020"
+             location="Belconnen, Canberra"
+             >
+       <p><em>Y's-buys was an op shop operated by YMCA Canberra raising funds to support community services.</em></p>
+       <p><em>Responsibilities:</em></p>
+        <ul>
+          <li>Donation sorting, pricing </li>
+          <li>Customer service</li>
+        </ul>
+      </CommunityItem>
+      <CommunityItem 
+             place="The Lab"
+             position="Mentor"
+             humanDates="Jun 2014–Dec 2016"
+             location="Dee Why, Sydney"
+             >
+        <p><em>
+          <a href="https://thelab.org.au/">The Lab</a> is a network of technology clubs for 
+          autistic children and young people who enjoy working with computers.
+        </em></p>
+      </CommunityItem>
+      <CommunityItem 
+             place="Code Rangers"
+             position="Assistant teacher"
+             humanDates="Apr 2016–Nov 2016"
+             location="Sydney"
+             >
+             <p><em>Code Rangers teaches your child to code. We put kids in charge of technology.</em></p>
+      </CommunityItem>
+      <CommunityItem 
+             place="Cana Communities"
+             position="Overnight stay volunteer"
+             humanDates="2015"
+             location="Redfern, Sydney"
+             >
+             <a href="https://www.cana.org.au/">Cana Communities</a>
+      </CommunityItem>
+      <CommunityItem 
+             place="State Emergency Service"
+             position="Rescue Volunteer"
+             humanDates="Mar 2012–Jun 2014"
+             location="Randwick, Sydney"
+             >
+         <em>Qualifications</em>:
+        <ul>
+          <li>Senior First Aid</li>
+          <li>Storm and Water Rescue</li>
+          <li>Maintaining Team Safety</li>
+          <li>General Rescue</li>
+          <li>Radio Operation</li>
+          <li>4WD Operation</li>
+        </ul>
+      </CommunityItem>
+      <CommunityItem 
+             place="Primary Ethics"
+             position="Volunteer discussion facilitator"
+             humanDates="Mar 2013–Dec 2014"
+             location="Daceyville, Sydney"
+             >
+        <a href="https://primaryethics.com.au/">Primary Ethics</a>
+      </CommunityItem>
+      <CommunityItem 
+             place="Shack Tutoring"
+             position="Volunteer tutor"
+             humanDates="2008"
+             location="UNSW Sydney"
+             >
+        <em>NSW HSC Subjects</em>:
+        <ul>
+         <li>
+           2 unit & extension 1 mathematics
+         </li>
+          <li>
+            Physics
+          </li>
+          <li>
+            Chemistry
+           </li>
+        </ul>
+      </CommunityItem>
+    </aside>
+  </div>
+</section>
+
+<style lang="scss">
+  section#community {
+    .container {
+      --gap: 4ch;
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      .main {
+        flex: 3;
+      }
+      aside {
+        flex: 4;
+        columns: 2;
+        column-gap: 4ch;
+      }
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    li {
+      margin: 0;
+    }
+  }
+</style>
