@@ -1,7 +1,7 @@
 ---
 import './Section.scss';
 
-import CommunityItem from './CommunityItem.astro';
+import CommunityItem from '@components/items/CommunityItem.astro';
 import InstagramLink from '@components/links/instagram.astro';
 ---
 <section id="community">
@@ -34,9 +34,10 @@ import InstagramLink from '@components/links/instagram.astro';
              location="Belconnen, Canberra"
              >
        <p><em>Y's-buys was an op shop operated by YMCA Canberra raising funds to support community services.</em></p>
-       <p><em>Responsibilities:</em></p>
+       <p>Responsibilities:</p>
         <ul>
-          <li>Donation sorting, pricing </li>
+          <li>Donation sorting, pricing & placing out for display</li>
+          <li>Management of a fairly substantial book library</li>
           <li>Customer service</li>
         </ul>
       </CommunityItem>
@@ -57,7 +58,7 @@ import InstagramLink from '@components/links/instagram.astro';
              humanDates="Apr 2016–Nov 2016"
              location="Sydney"
              >
-             <p><em>Code Rangers teaches your child to code. We put kids in charge of technology.</em></p>
+             <p><em>Code Rangers was an organisation providing coding lessons in schools.</em></p>
       </CommunityItem>
       <CommunityItem 
              place="Cana Communities"
@@ -65,15 +66,28 @@ import InstagramLink from '@components/links/instagram.astro';
              humanDates="2015"
              location="Redfern, Sydney"
              >
-             <a href="https://www.cana.org.au/">Cana Communities</a>
+             <p>
+      <em>
+        <a href="https://www.cana.org.au/">Cana Communities</a> is a not-for-profit charity working 
+        with men and women who are experiencing homelessness, addiction, imprisonment, mental 
+        health issues and other barriers that have prevented them from creating a positive life for themselves.
+      </em>
+             </p>
       </CommunityItem>
       <CommunityItem 
              place="State Emergency Service"
-             position="Rescue Volunteer"
+             position="Rescue volunteer"
              humanDates="Mar 2012–Jun 2014"
              location="Randwick, Sydney"
              >
-         <em>Qualifications</em>:
+             <p>
+              <em>
+                The NSW <a href="https://www.ses.nsw.gov.au/">State Emergency Service</a> is a volunteer-based emergency service 
+                that is responsible for helping communities prepare and respond to 
+                floods, storms and tsunami. 
+              </em>
+             </p>
+             <p>Qualifications:</p>
         <ul>
           <li>Senior First Aid</li>
           <li>Storm and Water Rescue</li>
@@ -85,11 +99,21 @@ import InstagramLink from '@components/links/instagram.astro';
       </CommunityItem>
       <CommunityItem 
              place="Primary Ethics"
-             position="Volunteer discussion facilitator"
+             position="Volunteer ethics teacher"
              humanDates="Mar 2013–Dec 2014"
              location="Daceyville, Sydney"
              >
-        <a href="https://primaryethics.com.au/">Primary Ethics</a>
+             <p>
+              <em>
+               <a href="https://primaryethics.com.au/">Primary Ethics</a> is an alternative
+               to special religious education in New South Wales providing ethics classes for school-aged children. 
+              </em>
+             </p>
+             <p>
+              <em>
+               In ethics classes, children are guided to develop their skills in critical thinking, ethical reasoning and respectful discussion
+              </em>
+             </p>
       </CommunityItem>
       <CommunityItem 
              place="Shack Tutoring"
@@ -97,10 +121,16 @@ import InstagramLink from '@components/links/instagram.astro';
              humanDates="2008"
              location="UNSW Sydney"
              >
-        <em>NSW HSC Subjects</em>:
+        <p>
+      <em>
+        <a href="https://www.arc.unsw.edu.au/community/shack-tutoring">Shack tutoring</a> is a 
+        volunteer tutoring service run by the Univerity of New South Wales student organisation ARC.
+        </em>
+       </p>
+       <p>NSW HSC Subjects Tutored:</p>
         <ul>
          <li>
-           2 unit & extension 1 mathematics
+           2 Unit & Extension 1 Mathematics
          </li>
           <li>
             Physics
@@ -116,6 +146,9 @@ import InstagramLink from '@components/links/instagram.astro';
 
 <style lang="scss">
   section#community {
+    ul {
+      margin-top: 0;
+    }
     .container {
       --gap: 4ch;
       display: flex;
