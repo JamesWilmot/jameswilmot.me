@@ -7,10 +7,10 @@ import StravaLink from '@components/links/strava.astro';
 import './Section.scss';
 ---
 <section id="banner">
-  <div class="me">
-    <img src="/assets/photos/me-high.webp" />
-  </div>
   <div class="container">
+    <div class="me">
+      <img src="/assets/photos/me-high.webp" />
+    </div>
     <div class="copy">
       <h1>Hello, I’m James</h1>
       <p class="sub">
@@ -44,19 +44,19 @@ import './Section.scss';
       And I aspire to work a summer in Antartica with the 
       <a href="https://www.antarctica.gov.au/" target="_blank">Australian Antarctic Program</a>.
       <Location>Canberra, Australia</Location>
-    </div>
-    <div class="links">
-      <ul>
-        <li>
-          <PdfLink href="https://raw.githubusercontent.com/JamesWilmot/JamesWilmot-Resume/master/professional/James%20Wilmot%20Resume.pdf" target="_blank">Professional resumé</PdfLink>
-        </li>
-        <li>
-          <GitHubLink href="https://github.com/JamesWilmot" target="_blank">JamesWilmot</GitHubLink>
-        </li>
-        </li>
-          <StravaLink href="https://www.strava.com/athletes/22238062" target="_blank">James Wilmot</StravaLink>
-        <li>
-      </ul>
+      <div class="links">
+        <ul>
+          <li>
+            <PdfLink href="https://raw.githubusercontent.com/JamesWilmot/JamesWilmot-Resume/master/professional/James%20Wilmot%20Resume.pdf" target="_blank">Professional resumé</PdfLink>
+          </li>
+          <li>
+            <GitHubLink href="https://github.com/JamesWilmot" target="_blank">JamesWilmot</GitHubLink>
+          </li>
+          </li>
+            <StravaLink href="https://www.strava.com/athletes/22238062" target="_blank">James Wilmot</StravaLink>
+          <li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -65,19 +65,33 @@ import './Section.scss';
 section#banner {
   --gap: 4ch;
   height: 100vh;
-  display: flex;
   gap: var(--gap);
   max-height: 1080px;
+  min-height: calc(900px + 2em);
 
   .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     height: 100%;
-    flex: 1;
+    grid-template-columns: 1fr 4ch 1fr;
+    grid-template-rows: minmax(900px, auto);
+    grid-template-areas:
+            " main . content "
+  }
+  .me {
+    grid-area: main;
   }
 
+  .copy {
+    grid-area: content;
+  }
+
+  /*
+  .links {
+    grid-area: footer;
+  }
+   */
+
   .me {
-    flex: 1;
     img {
       object-fit: cover;
       object-position: 50% 50%;
@@ -89,8 +103,6 @@ section#banner {
     font-size: 0.8em;
   }
   .links {
-    margin-top: auto;
-    margin-bottom: 1em;
     ul {
       margin: 0;
       padding: 0;
