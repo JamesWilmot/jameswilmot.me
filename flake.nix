@@ -14,6 +14,9 @@
       pkgs = import nixpkgs {
         inherit system;
       };
+      pkgsUnstable = import <nixpkgs-unstable> {
+        inherit system;
+      };
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = [
@@ -27,6 +30,10 @@
           pkgs.python310
           pkgs.python310.pkgs.grip
           pkgs.imagemagick
+
+          # deployment
+          pkgsUnstable.terraform
+          pkgsUnstable.awscli2
         ];
       };
     });
