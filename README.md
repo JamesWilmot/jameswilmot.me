@@ -2,6 +2,14 @@
 
 [![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
 
+## Tools
+
+https://notabug.org/irdvo/gpxtools
+
+## Deployment
+
+https://ryanf.dev/projects/autoblog-a-cicd-pipeline-with-astrojs-terraform-github-actions/#introduction
+
 ## 👉 Check out the ✨ [Live Demo](https://astro-blog-template.netlify.app/) ✨
 
 ## 👩‍🚀 Getting Started
