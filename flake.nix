@@ -32,8 +32,8 @@
           pkgs.imagemagick
 
           # deployment
-          pkgsUnstable.terraform
-          pkgsUnstable.awscli2
+          pkgs.terraform
+          pkgs.awscli2
         ];
       };
     });
