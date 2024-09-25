@@ -860,6 +860,16 @@
   resolved "https://registry.yarnpkg.com/@shikijs/core/-/core-1.9.1.tgz#f8c61fb19dbec510fa27f892c441d99b53093e49"
   integrity sha512-EmUful2MQtY8KgCF1OkBtOuMcvaZEvmdubhW0UHCGXi21O9dRLeADVCj+k6ZS+de7Mz9d2qixOXJ+GLhcK3pXg==
 
+"@solid-primitives/timer@^1.3.10":
+  version "1.3.10"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/timer/-/timer-1.3.10.tgz#2a46e394168d5c85591f8561d174f1dd4a3e2d54"
+  integrity sha512-mCWUKjkw2oPlcT9SDjziDcz2qO4y6JXcSsmtAePKlfz6vUMIuL+Q+FK1NKUkpH+anMoVBGZLsSxI5P2+Y1RHNw==
+
+"@solid-primitives/utils@^6.2.3":
+  version "6.2.3"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/utils/-/utils-6.2.3.tgz#1abed4c74a2696e08bd2e49cf2b86fc8b87a32bd"
+  integrity sha512-CqAwKb2T5Vi72+rhebSsqNZ9o67buYRdEJrIFzRXz3U59QqezuuxPsyzTSVCacwS5Pf109VRsgCJQoxKRoECZQ==
+
 "@sveltejs/vite-plugin-svelte-inspector@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@sveltejs/vite-plugin-svelte-inspector/-/vite-plugin-svelte-inspector-2.1.0.tgz#116ba2b73be43c1d7d93de749f37becc7e45bb8c"
@@ -2285,6 +2295,11 @@ kdbush@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/kdbush/-/kdbush-4.0.2.tgz#2f7b7246328b4657dd122b6c7f025fbc2c868e39"
   integrity sha512-WbCVYJ27Sz8zi9Q7Q0xHC+05iwkm3Znipc2XTlrnJbsHMYktW4hPhXUE8Ys1engBrvffoSCqbil1JQAa7clRpA==
+
+keen-slider@^6.8.6:
+  version "6.8.6"
+  resolved "https://registry.yarnpkg.com/keen-slider/-/keen-slider-6.8.6.tgz#17bb7b219860f291a5ea5fde4496b737bf407a83"
+  integrity sha512-dcEQ7GDBpCjUQA8XZeWh3oBBLLmyn8aoeIQFGL/NTVkoEOsmlnXqA4QykUm/SncolAZYGsEk/PfUhLZ7mwMM2w==
 
 kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
@@ -3743,6 +3758,15 @@ solid-refresh@^0.6.3:
     "@babel/generator" "^7.23.6"
     "@babel/helper-module-imports" "^7.22.15"
     "@babel/types" "^7.23.6"
+
+solid-slider@^1.3.18:
+  version "1.3.18"
+  resolved "https://registry.yarnpkg.com/solid-slider/-/solid-slider-1.3.18.tgz#3ab37421618fc3fc7bfa21e6d4e52702ee91b72c"
+  integrity sha512-7lSGAp1Qt0HBYJ0T9akGjJIfgzcqmvzLVUWCJmLlTVoUk0ocSwW+NW3tGbcJDFAPXMq7W3Tq+ts/aTpCYVoLwQ==
+  dependencies:
+    "@solid-primitives/timer" "^1.3.10"
+    "@solid-primitives/utils" "^6.2.3"
+    keen-slider "^6.8.6"
 
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.1, source-map-js@^1.2.0:
   version "1.2.0"
