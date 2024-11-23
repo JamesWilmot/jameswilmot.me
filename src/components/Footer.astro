@@ -15,6 +15,7 @@ import GitHubLink from './links/github.astro';
 
 <style>
   footer {
+    container-type: inline-size;
     color: var(--text-secondary);
     font-size: .8em;
     margin: 1em auto;
@@ -22,6 +23,8 @@ import GitHubLink from './links/github.astro';
     padding: 1em 2em;
     text-align: center;
     width: 100%;
+    @container (width < 300px ) {
+    }
   }
 
 </style>
