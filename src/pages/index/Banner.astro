@@ -17,17 +17,15 @@ import './Section.scss';
         &hellip; and I've been & done a little of everything.
         <p>
         I'm a volunteer, research software engineer, adventure bike tourer, 
-	harvest farm operations hand, runner, and web application 
-	developer. I've worked in non-for-profit, government, university,
+        harvest farm operations hand, runner, and web application 
+        developer. I've worked in non-for-profit, government, university
         and private sectors.
 
         <p>
-      Lorem ipsum dolor sit amet, consectetur <a href="#professional">my work</a>adipiscing elit. Ut non eros ac
-        nibh laoreet sollicitudin sed sit amet leo. Nam mauris nisi,
-        dapibus pulvinar lorem.
+        Through <a href="#professional">my work</a>
 
         <p> 
-	I believe in contributing to <a href="#community">community</a>, and its
+        I believe in contributing to <a href="#community">community</a>, and its
         power to build connection, resilience and inspiration. 
         <!--
         I've been a 
@@ -45,11 +43,11 @@ import './Section.scss';
         </p>
 
 
-      <p>
-      I partner with driven and talented people, teams and organisations to produce extraordinary outcomes.
+        <p>
+        I partner with driven and talented people, teams and organisations to produce extraordinary outcomes.
 
-      <p>
-      And I aspire to work a summer in Antartica with the 
+        <p>
+        And I aspire to work a summer in Antartica with the 
       <a href="https://www.antarctica.gov.au/" target="_blank">Australian Antarctic Program</a>.
       <Location>Canberra, Australia</Location>
       <div class="links">
@@ -73,19 +71,48 @@ import './Section.scss';
 section#banner {
   container-type: inline-size;
   --gap: 4ch;
-  height: 100vh;
   gap: var(--gap);
-  max-height: 1080px;
-  min-height: calc(900px + 2em);
 
-  .container {
-    display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 4ch 1fr;
-    grid-template-rows: minmax(900px, auto);
-    grid-template-areas:
-            " main . content "
+  @container (width > 1000px ) {
+    height: 100vh;
+    max-height: 1080px;
+    min-height: calc(900px + 2em);
+    .container {
+      display: grid;
+      height: 100%;
+      grid-template-columns: 1fr 4ch 1fr;
+      grid-template-rows: minmax(900px, auto);
+      grid-template-areas:
+          " main . content ";
+    }
+
+    .copy {
+      padding-right: 8ch;
+    }
+    .links, address.location {
+      font-size: 0.8em;
+    }
   }
+
+  @container (width < 500px ) {
+    .container {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        " content "
+        " main ";
+    }
+    .copy {
+      h1 {
+        margin-top: 1em;
+      }
+    }
+    .links {
+      display: none;
+    }
+  }
+
   .me {
     grid-area: main;
   }
@@ -108,9 +135,6 @@ section#banner {
       height: 100%;
     }
   }
-  .links, address.location {
-    font-size: 0.8em;
-  }
   .links {
     ul {
       margin: 0;
@@ -128,7 +152,6 @@ section#banner {
   }
   .copy {
     margin: auto 0;
-    padding-right: 8ch;
     h1 {
       font-size: 3em;
       margin-bottom: 0;
