@@ -3,37 +3,117 @@ import './Section.scss';
 
 import CommunityItem from '@components/items/CommunityItem.astro';
 import InstagramLink from '@components/links/instagram.astro';
+
+import { Picture } from 'astro:assets';
+
+import { Slider } from "solid-slider";
+import "solid-slider/slider.css";
+
+import ifcPicture from '/assets/ifc2024/timeforchange2.png';
 ---
 <section id="community">
   <div class="container">
     <div class="main">
-    <h1>Community</h1>
-    <CommunityItem 
-           place="Canberra Makerspace"
-           position="Executive & community member"
-           humanDates="Oct 2021–<em>present</em>"
-           location="Giralang, Canberra"
-           >
-      <p>
-      <em><a href="https://canberramaker.space/">Canberra Makerspace</a> is a community run multi-use workshop and meeting space in Giralang.</em>
-      </p>
-    </CommunityItem>
-    <CommunityItem 
-           place="#thirstyworkcbr"
-           humanDates="Feb 2022–<em>present</em>"
-           location="Canberra"
-           >
-           <InstagramLink href="https://www.instagram.com/explore/tags/thirstyworkcbr/" target="_blank">#thirstyworkcbr</InstagramLink>
-    </CommunityItem>
+      <h1>Community</h1>
+      <CommunityItem 
+             place="Canberra Makerspace"
+             position="Executive & community member"
+             humanDates="Oct 2021–<em>present</em>"
+             location="Giralang, Canberra"
+             >
+        <p>
+        <em><a href="https://canberramaker.space/">Canberra Makerspace</a> is a community run multi-use workshop and meeting space in Giralang.</em>
+        </p>
+        <p>Make. Hack. Void.</p>
+        <p>Responsibilities:</p>
+        <ul>
+          <li>Workshop management, maintenance & organisation</li>
+          <li>Insurance obligations and reporting</li>
+          <li>Incorporated association reporting requirements</li>
+          <li>Designed, implemented and deployed website (v2.0 coming soon!)</li>
+        </ul>
+        <div class="grid-tiles">
+          <img src="/assets/mhv/talking-cropped.png" />
+          <img src="/assets/mhv/metalwork-cropped.png" />
+          <img src="/assets/mhv/varvara-cropped.png" />
+          <img src="/assets/mhv/mx5-cropped.png" />
+          <img src="/assets/mhv/nerd-cropped.png" />
+          <img src="/assets/mhv/whs-cropped.png" />
+        </div>
+      </CommunityItem>
+      <CommunityItem 
+             place="#thirstyworkcbr"
+             humanDates="Feb 2022–<em>present</em>"
+             location="Canberra"
+             >
+             <p>
+             <em>
+             <InstagramLink href="https://www.instagram.com/explore/tags/thirstyworkcbr/" target="_blank">#thirstyworkcbr</InstagramLink>
+                is an inclusive gravel-oriented social ride—whatever your stead as long as you’re comfortable on dirt, no fear, we’ll make sure you make it to the pub!
+             </em>
+             </p>
+             <p>
+               Organise and lead community gravel bike rides through Instagram
+             </p>
+             <div class="grid-tiles">
+               <img src="/assets/tw/arbo-cropped.png" />
+               <img src="/assets/tw/lbg-cropped.png" />
+               <img src="/assets/tw/river-cropped.png" />
+               <img src="/assets/tw/james2-cropped.png" />
+             </div>
+      </CommunityItem>
     </div>
     <aside>
+      <CommunityItem 
+             place="Independents for Canberra"
+             position="Campaign volunteer"
+             humanDates="Oct 2024"
+             location="Yerrabi electorate, Canberra"
+             >
+        <p>
+        <em>
+          <a href="https://www.independentsforcanberra.com/">Independents for
+            Canberra</a> is a volunteer-led, community-driven political
+          movement that endorses and supports community independents to run for
+          office at ACT Elections. </em>
+        </p>
+        <p>
+        Volunteered for <a href="https://www.davidpollard.com.au/">David
+          Pollard</a>—an independent candidate for the electorate of
+        Yerrabi—during the 2024 ACT Legislative Assembly election campaign</p>
+        <figure>
+          <img src="/assets/ifc2024/timeforchange2.webp" />
+          <figcaption>An example of my handiwork</figcaption>
+        </figure>
+        <!--
+          <Picture src={ifcPicture} formats={['avif', 'webp']} alt="A description of my image." /> 
+        -->
+      </CommunityItem>
+      <CommunityItem 
+             place="Central Hockey Club"
+             position="SL5 Player"
+             humanDates="2024 Season"
+             location="Lyneham, Tuggeranong & Jerrabomberra"
+             >
+        <figure>
+          <img src="/assets/hockey/controllingBall.png" />
+          <figcaption>Maintaining possession during the grand final</figcaption>
+        </figure>
+        <figure>
+          <img src="/assets/hockey/premiersCropped.png" />
+          <figcaption>SL5 Premiers for Season 2024</figcaption>
+        </figure>
+        <!--
+          <Picture src={ifcPicture} formats={['avif', 'webp']} alt="A description of my image." /> 
+        -->
+      </CommunityItem>
       <CommunityItem 
              place="Y's-buys"
              position="Volunteer shop attendant"
              humanDates="Aug 2018–Mar 2020"
              location="Belconnen, Canberra"
              >
-       <p><em>Y's-buys was an op shop operated by YMCA Canberra raising funds to support community services.</em></p>
+             <p><em>Y's-buys was an op shop operated by <a href="https://ymcacanberra.org.au/">YMCA Canberra</a> raising funds to support community services.</em></p>
        <p>Responsibilities:</p>
         <ul>
           <li>Donation sorting, pricing & placing out for display</li>
@@ -146,6 +226,14 @@ import InstagramLink from '@components/links/instagram.astro';
 
 <style lang="scss">
   section#community {
+    container-type: inline-size;
+
+    .grid-tiles {
+      display: grid;
+      margin: 0.5em 0;
+      grid-template-columns: 1fr 1fr;
+    }
+
     ul {
       margin-top: 0;
     }
