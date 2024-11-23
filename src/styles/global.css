@@ -21,6 +21,10 @@ html {
   overflow-y: scroll;
 }
 
+address {
+  font-size: 0.8em;
+}
+
 @supports (scrollbar-gutter: stable) {
   html {
     overflow-y: auto;
@@ -168,7 +172,11 @@ figure {
   vertical-align: baseline;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-  margin: 0 0 3em 0;
+  margin: 0.5em 0;
+}
+
+figcaption {
+  font-size: 0.8em;
 }
 
 table {
@@ -238,6 +246,9 @@ input[name='theme-toggle'] {
   h1 {
     font-size: 3em;
   }
+  address {
+    font-size: 1em;
+  }
 
   .content h1 {
     font-size: 2.4em;
@@ -252,7 +263,7 @@ input[name='theme-toggle'] {
   p,
   ul,
   ol {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 1em 0;
   }
 }
