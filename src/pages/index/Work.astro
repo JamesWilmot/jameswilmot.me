@@ -1,7 +1,187 @@
 ---
 import './Section.scss';
+import CommunityItem from '@components/items/CommunityItem.astro';
 ---
 
 <section id="professional">
-  <h1>My work</h1>
+  <div class="container">
+    <div class="main">
+      <h1>My work</h1>
+    </div>
+    <aside>
+      <CommunityItem 
+             place="Dumossa"
+             position="Harvest operations hand"
+             humanDates="2020–23"
+             location="Moombooldool, NSW"
+             >
+        <p>Responsibilities:</p>
+             <ul>
+            <li>Header operations</li>
+            <li>Chaser bin operations</li>
+            <li>Basic machinery maintenance</li>
+            <li>Field bump-in & bump-out</li>
+          </ul>
+          <figure>
+            <img src="/assets/harvest2023/firefighting.jpg" />
+            <figcaption>Firefighting</figcaption>
+         </figure>
+          <figure>
+            <img src="/assets/harvest2023/chasing-cropped.jpg" />
+            <figcaption>Evening header chasing</figcaption>
+         </figure>
+       </CommunityItem>
+      <CommunityItem 
+             place="Conference Magic"
+             position="Audiovisual Technician"
+             humanDates="Sept 2011–Feb 2011"
+             location="Launceston, Tas; Port Douglas, QLD; Rotorua, NZ; Darwin, NT; Barossa Valley, SA; Wollongong, NSW; Terrigal, NSW"
+             >
+             <ul>
+               <li>Audiovisual technician for two medical conferences: Spring
+                 Seminar on Emergency Medicine and Evidence Review</li>
+               <li>Bump-in & bump-out</li>
+               <li>Technical support for presenters</li>
+             </ul>
+      </CommunityItem>
+      <CommunityItem 
+             place="Casella Family Brands"
+             position="Bottling line hand"
+             humanDates="Jan–Feb 2014"
+             location="Yenda, NSW"
+             >
+             <p>
+             <em>Casella Family Brands is a family-owned wine company based in
+               Australia. Its most well-known brand name is yellow tail.</em>
+             </p>
+             <ul>
+               <li>De-palletiser operator for bottling line</li>
+               <li>Forklift consignment picker</li>
+             </ul>
+       </CommunityItem>
+      <CommunityItem 
+             place="Coles"
+             position="Checkout attendant"
+             humanDates="May–Aug 2013"
+             location="Hillsdale, Sydney"
+             >
+       </CommunityItem>
+      <CommunityItem 
+             place="SIRCA"
+             position="Junior linux sysadmin"
+             humanDates="Jun–Dec 2013"
+             location="Sydney"
+             >
+             <p> <em>The <a href="https://www.sirca.org.au/">Securities Industry Research Centre of
+                 Asia-Pacific (SIRCA)</a> develops and provides 
+               data and advanced tools to promote and enable financial research
+             and innovation, particularly for member universities. </em>
+             </p>
+             <ul>
+               <li>Confluence migration</li>
+               <li>User management and permissions scripting</li>
+               <li>Help desk duties</li>
+             </ul>
+       </CommunityItem>
+      <CommunityItem 
+             place="Nugan Quality Foods"
+             position="Pasteuriser operator"
+             humanDates="Nov 2008–Feb 2009 & Nov 2007–Feb 2008"
+             location="Hanwood, NSW"
+             >
+             <p><em>
+               Nugan Quality Foods was a producer of fruit juice and concentrate
+             </em></p>
+             <ul>
+               <li>Pasteuriser and tank cleaning, preparation</li>
+               <li>Monitoring, testing and finalisation of pasteurisation</li>
+               <li>Apple, orange and carrot juice</li>
+             </ul>
+       </CommunityItem>
+      <CommunityItem 
+             place="JBS Swift"
+             position="Induction shed assistant"
+             humanDates="Sept–Nov 2007"
+             location="Tabbita, NSW"
+             >
+       </CommunityItem>
+      <CommunityItem 
+             place="Local farms"
+             position="Farm hand"
+             humanDates="Jul–Nov 2007"
+             location="Barellan, NSW"
+             >
+             <ul>
+               <li>Fencing</li>
+               <li>General labour</li>
+          </ul>
+       </CommunityItem>
+      <CommunityItem 
+             place="Casella Family Brands"
+             position="Vintage lab assistant"
+             humanDates="Jan–Apr 2007"
+             location="Barellan, NSW"
+             >
+             <ul>
+               <li>Sample collection from tank farms</li>
+               <li>Performing and recording sample lab tests</li>
+               <li>Wine additive measurement and records</li>
+               <li>Grape testing prior to crushing</li>
+               <li>Performing requests from wine makers</li>
+            </ul>
+       </CommunityItem>
+      <CommunityItem 
+             place="Atkinson's Hydroponics"
+             position="Farm hand"
+             humanDates="Nov 2006–Jan 2007"
+             location="Yoogali, NSW"
+             >
+             <ul>
+               <li>Lettuce shed hand</li>
+               <li>Tomato harvesting</li>
+          </ul>
+       </CommunityItem>
+    </aside>
+  </div>
 </section>
+
+<style lang="scss">
+  section#professional {
+    .grid-tiles {
+      display: grid;
+      margin: 0.5em 0;
+      grid-template-columns: 1fr 1fr;
+      .full {
+        grid-column: span 2;
+      }
+    }
+    .container {
+      --gap: 4ch;
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      .main {
+        flex: 3;
+      }
+      aside {
+        flex: 4;
+        columns: 2;
+        column-gap: 4ch;
+      }
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      li {
+        margin: 0;
+      }
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    h2 {
+      font-size: 1em;
+    }
+  }
+
+</style>
