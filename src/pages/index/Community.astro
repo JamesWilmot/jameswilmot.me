@@ -33,12 +33,30 @@ import ifcPicture from '/assets/ifc2024/timeforchange2.png';
           <li>Designed, implemented and deployed website (v2.0 coming soon!)</li>
         </ul>
         <div class="grid-tiles">
-          <img src="/assets/mhv/talking-cropped.png" />
-          <img src="/assets/mhv/metalwork-cropped.png" />
-          <img src="/assets/mhv/varvara-cropped.png" />
-          <img src="/assets/mhv/mx5-cropped.png" />
-          <img src="/assets/mhv/nerd-cropped.png" />
-          <img src="/assets/mhv/whs-cropped.png" />
+          <figure>
+            <img src="/assets/mhv/talking-cropped.png" />
+            <figcaption>Collaborating in the workshop</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/mhv/metalwork-cropped.png" />
+            <figcaption>The metalwork corner</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/mhv/varvara-cropped.png" />
+            <figcaption>Examining spark plugs</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/mhv/mx5-cropped.png" />
+            <figcaption>MX5 on jackstands</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/mhv/nerd-cropped.png" />
+            <figcaption>8-bit computer nerdery</figcaption>
+          </figure>
+          <figure>
+            <img src="/assets/mhv/whs-cropped.png" />
+            <figcaption>Safely mounting an antenna</figcaption>
+          </figure>
         </div>
       </CommunityItem>
       <CommunityItem 
@@ -56,10 +74,22 @@ import ifcPicture from '/assets/ifc2024/timeforchange2.png';
                Organise and lead community gravel bike rides through Instagram
              </p>
              <div class="grid-tiles">
-               <img src="/assets/tw/arbo-cropped.png" />
-               <img src="/assets/tw/lbg-cropped.png" />
-               <img src="/assets/tw/river-cropped.png" />
-               <img src="/assets/tw/james2-cropped.png" />
+               <figure>
+                 <img src="/assets/tw/arbo-cropped.png" />
+                 <figcaption>Climbing into the National Arboretum</figcaption>
+               </figure>
+               <figure>
+                 <img src="/assets/tw/lbg-cropped.png" />
+                 <figcaption>Bike maintenance under an open sky</figcaption>
+               </figure>
+               <figure>
+                 <img src="/assets/tw/river-cropped.png" />
+                 <figcaption>Fording the mighty Molonglo</figcaption>
+               </figure>
+               <figure>
+                 <img src="/assets/tw/james2-cropped.png" />
+                 <figcaption>A pause from grinding a berm</figcaption>
+               </figure>
              </div>
       </CommunityItem>
     </div>
@@ -231,6 +261,7 @@ import ifcPicture from '/assets/ifc2024/timeforchange2.png';
     .grid-tiles {
       display: grid;
       margin: 0.5em 0;
+      gap: 1ch;
       grid-template-columns: 1fr 1fr;
     }
 
