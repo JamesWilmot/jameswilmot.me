@@ -1,17 +1,27 @@
 ---
 import './Section.scss';
 import Map from '@components/Map';
+
+const routeSources = [
+  {
+    "name": "ta2020",
+    "data": ""
+  }
+]
 ---
 
 <section id="adventure">
   <div class="container">
-    <div class="mapbox">
-      <div style="height: 100%; width: 100%; position: relative;">
-        <Map client:load style="display: block; height: 100%; width: 100%;"/>
-      </div>
-    </div>
     <div class="copy">
       <h1>Adventure</h1>
+    </div>
+    <div class="mapbox">
+      <div style="height: 100%; width: 100%; position: relative;">
+        <Map client:load 
+         zoom="4.0"
+         center="[162.78, -40.59]"
+         style="display: block; height: 100%; width: 100%;"/>
+      </div>
     </div>
   </div>
 </section>
@@ -25,7 +35,7 @@ section#adventure {
     gap: 4ch;
   }
   .mapbox {
-    flex: 4;
+    flex: 5;
   }
   .copy {
     flex: 3;
