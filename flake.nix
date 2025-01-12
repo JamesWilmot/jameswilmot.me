@@ -36,6 +36,11 @@
           # deployment
           pkgs.terraform
           pkgs.awscli2
+
+          # gpxtools
+          pkgs.cmake
+          pkgs.autoconf
+          pkgs.automake
         ];
       };
     });
