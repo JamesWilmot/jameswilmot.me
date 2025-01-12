@@ -11,6 +11,14 @@ export default (props) => {
     zoom: 5.2,
   });
 
+  onMount(() => {
+    console.log(props)
+    setViewport({
+      zoom: props.zoom,
+      center: JSON.parse(props.center),
+    });
+  });
+
   return (
     <>
       <MapGL
