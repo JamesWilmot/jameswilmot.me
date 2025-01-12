@@ -34,8 +34,8 @@
           pkgs.imagemagick
 
           # deployment
-          pkgs.terraform
-          pkgs.awscli2
+          # pkgs.terraform
+          # pkgs.awscli2
 
           # gpxtools
           pkgs.cmake
