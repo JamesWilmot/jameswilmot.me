@@ -175,6 +175,10 @@ figure {
   margin: 0.5em 0;
 }
 
+figure img {
+  cursor: zoom-in;
+}
+
 figcaption {
   font-size: 0.8em;
 }
