@@ -44,7 +44,7 @@ import './Section.scss';
         I partner with driven and talented people, teams and organisations to produce extraordinary outcomes.
 
         <p>
-        And I aspire to work in Antartica with the 
+        And I aspire to work in Antarctica with the 
       <a href="https://www.antarctica.gov.au/" target="_blank">Australian Antarctic Program</a>.
       <Location>Canberra, Australia</Location>
       <div class="links">
@@ -118,11 +118,12 @@ section#banner {
       max-height: none; // TODO refactor this out
       height: auto;
       grid-template-columns: 2ch 1fr 2ch;
-      grid-template-rows: 80vh 2em auto;
+      grid-template-rows: 80vh 2em auto 2em;
       grid-template-areas:
           " main main main "
           " . . . "
-          " .  content . ";
+          " .  content . "
+          " . . . ";
     }
 
     .links ul {

@@ -290,9 +290,16 @@ import InstagramLink from '@components/links/instagram.astro';
       margin: 0.5em 0;
     }
 
+    figcaption {
+      line-height: 1;
+    }
+
     @container (width < 1000px) {
       .container {
         flex-direction: column;
+        aside {
+          column-gap: 2ch;
+        }
       }
     }
   }
