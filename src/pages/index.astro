@@ -3,7 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 
 import BannerSection from './index/Banner.astro';
 // import WorkSection from './index/Work.astro';
-// import CommunitySection from './index/Community.astro';
+import CommunitySection from './index/Community.astro';
 // import AdventureSection from './index/Adventure.astro';
 
 
@@ -15,9 +15,9 @@ const description = 'My personal website';
 
 <BaseLayout title={title} description={description} current="/">
   <BannerSection />
+  <CommunitySection />
   <!--
   <WorkSection />
-  <CommunitySection />
   <AdventureSection />
   -->
 </BaseLayout>

@@ -289,5 +289,11 @@ import InstagramLink from '@components/links/instagram.astro';
     p {
       margin: 0.5em 0;
     }
+
+    @container (width < 1000px) {
+      .container {
+        flex-direction: column;
+      }
+    }
   }
 </style>

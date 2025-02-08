@@ -10,11 +10,14 @@
   --font-family-code: Inconsolata;
 }
 
-:root.theme-dark {
-  --background-body: #202122;
-  --text-main: #fff;
-  --text-secondary: #ccc;
-  --primary-color: #548e9b;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #202122;
+    --background-main: black;
+    --text-main: #fff;
+    --text-secondary: #ccc;
+    --primary-color: #548e9b;
+  }
 }
 
 html {
