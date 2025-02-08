@@ -263,11 +263,4 @@ input[name='theme-toggle'] {
   body {
     font-size: 14px;
   }
-
-  p,
-  ul,
-  ol {
-    font-size: 1rem;
-    margin: 1em 0;
-  }
 }
