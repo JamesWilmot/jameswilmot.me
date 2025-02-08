@@ -22,7 +22,7 @@
         buildInputs = [
           # Set the major version of Node.js
           pkgs.nodejs-18_x
-          pkgs.yarn
+          pkgs.yarn-berry
           pkgs.vips
           pkgs.glibc
           pkgs.nodePackages.typescript
