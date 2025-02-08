@@ -2,19 +2,18 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 import BannerSection from './index/Banner.astro';
-import WorkSection from './index/Work.astro';
-import CommunitySection from './index/Community.astro';
-import AdventureSection from './index/Adventure.astro';
+// import WorkSection from './index/Work.astro';
+// import CommunitySection from './index/Community.astro';
+// import AdventureSection from './index/Adventure.astro';
 
 
 
 
 const title = 'James Wilmot';
 const description = 'My personal website';
-const permalink = Astro.site.href;
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink}>
+<BaseLayout title={title} description={description} current="/">
   <BannerSection />
   <!--
   <WorkSection />

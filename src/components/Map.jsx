@@ -1,6 +1,6 @@
 import { createSignal, onMount } from 'solid-js';
 
-import MapGL, { Source, Layer } from "solid-map-gl";
+import MapGL from "solid-map-gl";
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 import './Map.css';

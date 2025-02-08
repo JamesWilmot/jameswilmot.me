@@ -6,11 +6,22 @@ import '../styles/global.css'
 export interface Props {
   title: string
   description: string
-  permalink: string
+  current: string
 }
 
-const { title, description, permalink } = Astro.props
-const socialUrl = Astro.site.href + 'assets/social.png'
+const { title, description, current } = Astro.props
+
+let baseUrl = ""
+
+if (Astro.site) {
+  baseUrl = Astro.site.href
+} else {
+  baseUrl = "http://localhost:4321/"
+}
+
+const permalink = baseUrl + current
+
+const socialUrl = baseUrl + 'assets/social.png'
 ---
 
 <!-- Global Metadata -->

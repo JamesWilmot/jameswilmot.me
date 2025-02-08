@@ -1,19 +1,17 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 export interface Props {
   title: string;
   description: string;
-  permalink: string;
-  current?: string;
+  current: string;
 }
-const { title, description, permalink, current } = Astro.props;
+const { title, description, current } = Astro.props;
 ---
 <html lang="en">
 <head>
-  <BaseHead title={title} description={description} permalink={permalink} />
+  <BaseHead title={title} description={description} current={current} />
 </head>
 <body>
   <div class="layout">
