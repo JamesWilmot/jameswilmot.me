@@ -1,0 +1,49 @@
+section {
+  container-type: inline-size;
+
+  .grid-tiles {
+    display: grid;
+    margin: 0.5em 0;
+    gap: 1ch;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    li {
+      margin: 0;
+    }
+  }
+  .container {
+    --gap: 4ch;
+    display: flex;
+    gap: var(--gap);
+    width: 100%;
+    .main {
+      flex: 3;
+    }
+    aside {
+      flex: 4;
+      columns: 2;
+      column-gap: 4ch;
+    }
+  }
+
+  p {
+    margin: 0.5em 0;
+  }
+
+  figcaption {
+    line-height: 1;
+  }
+
+  @container (width < 1000px) {
+    .container {
+      flex-direction: column;
+      aside {
+        column-gap: 2ch;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import './Section.scss';
+import './Common.scss';
 import CommunityItem from '@components/items/CommunityItem.astro';
 ---
 
@@ -147,41 +148,6 @@ import CommunityItem from '@components/items/CommunityItem.astro';
 
 <style lang="scss">
   section#professional {
-    .grid-tiles {
-      display: grid;
-      margin: 0.5em 0;
-      grid-template-columns: 1fr 1fr;
-      .full {
-        grid-column: span 2;
-      }
-    }
-    .container {
-      --gap: 4ch;
-      display: flex;
-      gap: var(--gap);
-      width: 100%;
-      .main {
-        flex: 3;
-      }
-      aside {
-        flex: 4;
-        columns: 2;
-        column-gap: 4ch;
-      }
-    }
-    ul {
-      margin-top: 0;
-      margin-bottom: 0.5em;
-      li {
-        margin: 0;
-      }
-    }
-    p {
-      margin: 0.5em 0;
-    }
-    h2 {
-      font-size: 1em;
-    }
   }
 
 </style>
