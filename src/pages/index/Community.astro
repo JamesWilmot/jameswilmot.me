@@ -257,5 +257,28 @@ import InstagramLink from '@components/links/instagram.astro';
 
 <style lang="scss">
   section#community {
+    .container {
+      --gap: 4ch;
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      .main {
+        flex: 3;
+      }
+      aside {
+        flex: 4;
+        columns: 2;
+        column-gap: 4ch;
+      }
+    }
+
+    @container (width < 1000px) {
+      .container {
+        flex-direction: column;
+        aside {
+          column-gap: 2ch;
+        }
+      }
+    }
   }
 </style>

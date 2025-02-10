@@ -15,6 +15,17 @@ section {
       margin: 0;
     }
   }
+
+  p {
+    margin: 0.5em 0;
+  }
+  
+  figcaption {
+    line-height: 1;
+  }
+
+
+/*
   .container {
     --gap: 4ch;
     display: flex;
@@ -30,14 +41,6 @@ section {
     }
   }
 
-  p {
-    margin: 0.5em 0;
-  }
-
-  figcaption {
-    line-height: 1;
-  }
-
   @container (width < 1000px) {
     .container {
       flex-direction: column;
@@ -46,4 +49,5 @@ section {
       }
     }
   }
+*/
 }

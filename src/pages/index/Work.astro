@@ -7,9 +7,7 @@ import CommunityItem from '@components/items/CommunityItem.astro';
 <section id="professional">
   <div class="container">
     <div class="main">
-      <h1>My work</h1>
-    </div>
-    <aside>
+      <h1>Work history</h1>
       <CommunityItem 
              place="Dumossa"
              position="Harvest operations hand"
@@ -226,12 +224,20 @@ import CommunityItem from '@components/items/CommunityItem.astro';
                <li>Tomato harvesting</li>
           </ul>
        </CommunityItem>
+    </div>
+    <aside>
     </aside>
   </div>
 </section>
 
 <style lang="scss">
   section#professional {
+    .container {
+      .main {
+        columns: 4;
+        column-gap: 4ch;
+      }
+    }
   }
 
 </style>
