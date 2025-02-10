@@ -238,6 +238,22 @@ import CommunityItem from '@components/items/CommunityItem.astro';
         column-gap: 4ch;
       }
     }
+    @container (width < 1100px) and (width > 850px) {
+      .container {
+        .main {
+          columns: 3;
+          column-gap: 2ch;
+        }
+      }
+    }
+    @container (width < 850px) {
+      .container {
+        .main {
+          columns: 2;
+          column-gap: 2ch;
+        }
+      }
+    }
   }
 
 </style>
