@@ -9,6 +9,61 @@ import CommunityItem from '@components/items/CommunityItem.astro';
     <div class="main">
       <h1>Work history</h1>
       <CommunityItem 
+             place="UNSW Sydney"
+             position="Research software engineer"
+             humanDates="Jun 2016–<em>current</em>"
+             location="Remote"
+             >
+          <p>
+            In the beginning, Varvara Efremova implemented
+            <a href="http://app.supramolecular.org/bindfit/">Supramolecular.org Bindfit</a>: a binding constant calculator for the web.
+          </p>
+          <p>
+            As part of the
+            <a href="https://ardc.edu.au/project/australian-characterisation-commons-at-scale-accs/">ARDC Australian Commons at Scale</a> project we generalised Bindfit by architecting and implementing <em>opendata.fit</em>: a web-based data analysis and publication platform focused on improving reproducibility in research with FAIR data principles.
+          </p>
+          <p>
+            Then continuing our work with the <a href="https://www.rna.unsw.edu.au/">UNSW RNA Institute</a>, we designed 
+            <a href="https://docs.opendata.studio/intro/intro/"><em>datakits</em></a>: a data, analysis, visualisation 
+            and algorithm execution containerisation format 
+            utilising and extending the Frictionless data specifications.
+          </p>
+          <p>
+            Finally, we used <em>datakits</em> to create the 
+            <a href="https://opendata.studio/">opendata.studio</a> project: a
+            software toolbox that makes publishing reproducible, interactive
+            workflows simple.
+          </p>
+          <h3>eResearch 2024</h3>
+          <ul>
+            <li><em>Session chair:</em> Research Data Managed and Published</li>
+            <li>
+              BoF workshop: <a href="https://conference.eresearch.edu.au/data-and-metadata-standards-for-web-publication-of-research-data/">
+              Data and metadata standards for web publication of research data
+              </a>
+            </li>
+            <li>
+              Lightning talk: <a href="https://conference.eresearch.edu.au/publishing-research-data-with-frictionless-data-packages-for-reproducibility/">
+               Publishing research data with Frictionless data packages for reproducibility
+              </a>
+            </li>
+            <li>Poster: <a href="/assets/ods/posters/eResearch2024.pdf">Case study: publishing an interactive, reproducible data workflow using Frictionless data standards</a></li>
+          </ul>
+          <h3>Supramol 2025 & 2024</h3>
+          <ul>
+            <li>Poster (2025): <a href="/assets/ods/posters/Supramol25.pdf">Publishing reproducible, interactive binding constant analyses using FAIR data principles</a></li>
+            <li>Poster (2024): <a href="/assets/ods/posters/Supramol24.pdf">Introducing opendata.fit - the next iteration of supramolecular.org</a></li>
+          </ul>
+          <h3>eResearch 2022</h3>
+          <ul>
+            <li>Talk: Introducing opendata.fit: a FAIR data analysis and publication platform</li>
+            <li>Poster: <a href="/assets/ods/posters/eResearch2022.pdf">Introducing opendata.fit: a FAIR data analysis and publication platform</a></li>
+          </ul>
+          <p>
+            <em>Team:</em> <a href="https://echus.co">Varvara Efremova</a>, <a href="https://research.unsw.edu.au/people/professor-pall-thordarson">Prof. Pall Thordarson</a> and myself
+          </p>
+       </CommunityItem>
+      <CommunityItem 
              place="Dumossa"
              position="Harvest operations hand"
              humanDates="2020–23"
@@ -29,6 +84,17 @@ import CommunityItem from '@components/items/CommunityItem.astro';
             <img src="/assets/harvest2023/chasing-cropped.jpg" />
             <figcaption>Dusk header chasing</figcaption>
          </figure>
+       </CommunityItem>
+      <CommunityItem 
+             place="Biotext"
+             position="Web developer"
+             humanDates="Jul 2017–Jan 2018"
+             location="Canberra"
+             >
+          <p>
+          <em><a href="https://www.biotext.com.au/">Biotext</a> are experts in writing, editing, publishing and design who specialise in the understanding and publication of complex information.</em>
+          </p>
+          <p>Collaborated with in-house designers and editors to design and build <a href="https://remediationaustralasia.com.au/">Remediation Australasia</a>, reflecting the print publication's style and information architecture</p>
        </CommunityItem>
       <CommunityItem 
              place="UNSW Canberra"
@@ -232,6 +298,12 @@ import CommunityItem from '@components/items/CommunityItem.astro';
 
 <style lang="scss">
   section#professional {
+    h3 {
+      font-size: 0.85em;
+      margin-bottom: 0.25em;
+      font-style: italic;
+    }
+
     .container {
       .main {
         columns: 4;
