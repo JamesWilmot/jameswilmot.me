@@ -2,12 +2,9 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 
 import BannerSection from './index/Banner.astro';
-// import WorkSection from './index/Work.astro';
+import WorkSection from './index/Work.astro';
 import CommunitySection from './index/Community.astro';
 // import AdventureSection from './index/Adventure.astro';
-
-
-
 
 const title = 'James Wilmot';
 const description = 'My personal website';
@@ -15,15 +12,14 @@ const description = 'My personal website';
 
 <BaseLayout title={title} description={description} current="/">
   <BannerSection />
+  <WorkSection />
   <CommunitySection />
   <!--
-  <WorkSection />
   <AdventureSection />
   -->
 </BaseLayout>
 
 <style lang="scss">
-
   address .icon {
     height: 1em;
   }
