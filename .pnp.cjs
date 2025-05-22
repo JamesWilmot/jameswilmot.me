@@ -30,13 +30,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@astrojs/mdx", "virtual:fbc60e196ab47c381aa50e74e08aa7568b9f3ff56c46502709fd51a3b2a1df079f0186c77dd347ec84cb43739442af73a5cbcb074b2321256b4b1e687a8a9495#npm:4.2.6"],\
           ["@astrojs/svelte", "virtual:fbc60e196ab47c381aa50e74e08aa7568b9f3ff56c46502709fd51a3b2a1df079f0186c77dd347ec84cb43739442af73a5cbcb074b2321256b4b1e687a8a9495#npm:7.0.13"],\
+          ["acorn", "npm:8.14.1"],\
           ["astro", "npm:5.7.14"],\
           ["jameswilmot-me", "workspace:."],\
           ["reading-time", "npm:1.5.0"],\
           ["rehype-external-links", "npm:3.0.0"],\
           ["remark-gfm", "npm:4.0.1"],\
           ["remark-smartypants", "npm:2.1.0"],\
-          ["svelte", "npm:5.32.1"]\
+          ["svelte", "npm:5.32.1"],\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -164,7 +166,7 @@ const RAW_RUNTIME_STATE =
           ["astro", "npm:5.7.14"],\
           ["svelte", "npm:5.32.1"],\
           ["svelte2tsx", "virtual:671d67658a0e4884cbdac1417283a25a28c7dcd10614ac9b930687fd4cdc3593c31553f96bfbe2234b3715411386ac77f955efb7fe50e8eb0c83163b9ae30e63#npm:0.7.39"],\
-          ["typescript", null],\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"],\
           ["vite", "virtual:20d1d314d930ba9307d0aecdbb210adbd3be59f3fa6e535dc71b20dfb6beea1712b85eea519e24acb9ed56eb54ecb17b879dfc6c0a640bf80643731cdf5c0a2a#npm:6.3.5"]\
         ],\
         "packagePeers": [\
@@ -2961,13 +2963,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@astrojs/mdx", "virtual:fbc60e196ab47c381aa50e74e08aa7568b9f3ff56c46502709fd51a3b2a1df079f0186c77dd347ec84cb43739442af73a5cbcb074b2321256b4b1e687a8a9495#npm:4.2.6"],\
           ["@astrojs/svelte", "virtual:fbc60e196ab47c381aa50e74e08aa7568b9f3ff56c46502709fd51a3b2a1df079f0186c77dd347ec84cb43739442af73a5cbcb074b2321256b4b1e687a8a9495#npm:7.0.13"],\
+          ["acorn", "npm:8.14.1"],\
           ["astro", "npm:5.7.14"],\
           ["jameswilmot-me", "workspace:."],\
           ["reading-time", "npm:1.5.0"],\
           ["rehype-external-links", "npm:3.0.0"],\
           ["remark-gfm", "npm:4.0.1"],\
           ["remark-smartypants", "npm:2.1.0"],\
-          ["svelte", "npm:5.32.1"]\
+          ["svelte", "npm:5.32.1"],\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -5109,7 +5113,7 @@ const RAW_RUNTIME_STATE =
           ["pascal-case", "npm:3.1.2"],\
           ["svelte", "npm:5.32.1"],\
           ["svelte2tsx", "virtual:671d67658a0e4884cbdac1417283a25a28c7dcd10614ac9b930687fd4cdc3593c31553f96bfbe2234b3715411386ac77f955efb7fe50e8eb0c83163b9ae30e63#npm:0.7.39"],\
-          ["typescript", null]\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"]\
         ],\
         "packagePeers": [\
           "@types/svelte",\
@@ -5227,6 +5231,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/type-fest-npm-4.41.0-31a6ce52d8-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
           ["type-fest", "npm:4.41.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["typescript", [\
+      ["patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5", {\
+        "packageLocation": "../../../.yarn/berry/cache/typescript-patch-f64146f279-10c0.zip/node_modules/typescript/",\
+        "packageDependencies": [\
+          ["typescript", "patch:typescript@npm%3A5.8.3#optional!builtin<compat/typescript>::version=5.8.3&hash=5786d5"]\
         ],\
         "linkType": "HARD"\
       }]\
