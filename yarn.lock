@@ -1867,6 +1867,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"astro-favicons@npm:^3.1.5":
+  version: 3.1.5
+  resolution: "astro-favicons@npm:3.1.5"
+  dependencies:
+    favilib: "npm:^1.0.5"
+    ultrahtml: "npm:^1.5.3"
+  peerDependencies:
+    astro: ">= 4.0.0"
+  checksum: 10c0/1573580520bebc871e83304aa677dfd256d61adab3635c9c63542b929252dcadc2bf852d61f55fa7511ecc9c9d3f6cf9b115f86fe1f382d359d1f2852e12c900
+  languageName: node
+  linkType: hard
+
 "astro@npm:^4.0.1":
   version: 4.11.3
   resolution: "astro@npm:4.11.3"
@@ -2660,6 +2672,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escape-html@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "escape-html@npm:1.0.3"
+  checksum: 10c0/524c739d776b36c3d29fa08a22e03e8824e3b2fd57500e5e44ecf3cc4707c34c60f9ca0781c0e33d191f2991161504c295e98f68c78fe7baa6e57081ec6ac0a3
+  languageName: node
+  linkType: hard
+
 "escape-string-regexp@npm:^1.0.5":
   version: 1.0.5
   resolution: "escape-string-regexp@npm:1.0.5"
@@ -2808,6 +2827,17 @@ __metadata:
   dependencies:
     reusify: "npm:^1.0.4"
   checksum: 10c0/1095f16cea45fb3beff558bb3afa74ca7a9250f5a670b65db7ed585f92b4b48381445cd328b3d87323da81e43232b5d5978a8201bde84e0cd514310f1ea6da34
+  languageName: node
+  linkType: hard
+
+"favilib@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "favilib@npm:1.0.5"
+  dependencies:
+    escape-html: "npm:^1.0.3"
+    sharp: "npm:^0.33.5"
+    xml2js: "npm:^0.6.2"
+  checksum: 10c0/ab51e3e3657b3801d8ecf8b8f1139c7d1bee8aeefca7c92b8aa0199fba49a4b326d0505f1fe5b9a9da078806c6bfc786e8f337a062a2263df3c0bc2f8bd44b27
   languageName: node
   linkType: hard
 
@@ -3531,6 +3561,7 @@ __metadata:
     "@astrojs/solid-js": "npm:^4.4.0"
     "@astrojs/svelte": "npm:^5.0.0"
     astro: "npm:^4.0.1"
+    astro-favicons: "npm:^3.1.5"
     mapbox-gl: "npm:^3.5.1"
     reading-time: "npm:^1.5.0"
     rehype-external-links: "npm:^3.0.0"
@@ -5534,6 +5565,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sax@npm:>=0.6.0":
+  version: 1.4.1
+  resolution: "sax@npm:1.4.1"
+  checksum: 10c0/6bf86318a254c5d898ede6bd3ded15daf68ae08a5495a2739564eb265cd13bcc64a07ab466fb204f67ce472bb534eb8612dac587435515169593f4fffa11de7c
+  languageName: node
+  linkType: hard
+
 "section-matter@npm:^1.0.0":
   version: 1.0.0
   resolution: "section-matter@npm:1.0.0"
@@ -5603,7 +5641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.33.0":
+"sharp@npm:^0.33.0, sharp@npm:^0.33.5":
   version: 0.33.5
   resolution: "sharp@npm:0.33.5"
   dependencies:
@@ -6217,6 +6255,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10c0/6721ac8933a70c252d7b640b345792e103d881811ff660355617c1836526dbb71c2044e2e77a8823fb3570b469f33276875a4cab6d3c4de4ae7d7ee1c3074ae4
+  languageName: node
+  linkType: hard
+
+"ultrahtml@npm:^1.5.3":
+  version: 1.6.0
+  resolution: "ultrahtml@npm:1.6.0"
+  checksum: 10c0/1140be819fdde198d83ad61b0186cb1fdb9d3a5d77ff416a752ae735089851a182d2100a1654f6b70dbb4f67881fcac1afba9323e261c8a95846a63f668b4c2a
   languageName: node
   linkType: hard
 
@@ -6865,6 +6910,23 @@ __metadata:
     string-width: "npm:^5.0.1"
     strip-ansi: "npm:^7.0.1"
   checksum: 10c0/138ff58a41d2f877eae87e3282c0630fc2789012fc1af4d6bd626eeb9a2f9a65ca92005e6e69a75c7b85a68479fe7443c7dbe1eb8fbaa681a4491364b7c55c60
+  languageName: node
+  linkType: hard
+
+"xml2js@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "xml2js@npm:0.6.2"
+  dependencies:
+    sax: "npm:>=0.6.0"
+    xmlbuilder: "npm:~11.0.0"
+  checksum: 10c0/e98a84e9c172c556ee2c5afa0fc7161b46919e8b53ab20de140eedea19903ed82f7cd5b1576fb345c84f0a18da1982ddf65908129b58fc3d7cbc658ae232108f
+  languageName: node
+  linkType: hard
+
+"xmlbuilder@npm:~11.0.0":
+  version: 11.0.1
+  resolution: "xmlbuilder@npm:11.0.1"
+  checksum: 10c0/74b979f89a0a129926bc786b913459bdbcefa809afaa551c5ab83f89b1915bdaea14c11c759284bb9b931e3b53004dbc2181e21d3ca9553eeb0b2a7b4e40c35b
   languageName: node
   linkType: hard
 
