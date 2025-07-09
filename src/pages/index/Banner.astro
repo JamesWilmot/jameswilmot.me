@@ -12,7 +12,7 @@ import './Section.scss';
       <img src="/assets/photos/me-high.webp" title="Portrait of James Wilmot in front of blurred greenery"/>
     </div>
     <div class="copy">
-      <h1>Hi, I’m James</h1>
+      <h1>Hi, I’m Jimmy</h1>
       <p class="sub">
         &hellip; and I've been and done a little of everything.
         <p>
@@ -75,12 +75,14 @@ section#banner {
   }
   
   .links {
+    margin-top: 1.5em;
     ul {
       margin: 0;
       padding: 0;
     }
 
     li {
+      font-size: 0.8em;
       margin: 0;
       padding: 0;
       display: inline-block;
@@ -117,13 +119,13 @@ section#banner {
     .container {
       max-height: none; // TODO refactor this out
       height: auto;
-      grid-template-columns: 2ch 1fr 2ch;
-      grid-template-rows: 80vh 2em auto 2em;
+      grid-template-columns: 4ch 1fr 4ch;
+      grid-template-rows: 2em auto 2em minmax(600px, 90vh);
       grid-template-areas:
-          " main main main "
           " . . . "
           " .  content . "
-          " . . . ";
+          " . . . "
+          " main main main "
     }
 
     .links ul {
@@ -138,7 +140,7 @@ section#banner {
     }
   }
 
-  .links, address.location {
+  address.location {
     font-size: 0.7em;
   }
 
