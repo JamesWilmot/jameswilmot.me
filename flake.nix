@@ -21,26 +21,26 @@
       devShells.default = pkgs.mkShell {
         buildInputs = [
           # Set the major version of Node.js
-          pkgs.nodejs_22
+          pkgs.nodejs_20
           pkgs.yarn-berry
-          #pkgs.vips
-          #pkgs.glibc
+          pkgs.vips
+          pkgs.glibc
           pkgs.nodePackages.typescript
           # pkgs.nodePackages.typescript-language-server
 
           # dependencies for grip markdown viewer
-          #pkgs.python310
-          #pkgs.python310.pkgs.grip
-          #pkgs.imagemagick
+          pkgs.python310
+          pkgs.python310.pkgs.grip
+          pkgs.imagemagick
 
           # deployment
           # pkgs.terraform
           # pkgs.awscli2
 
           # gpxtools
-          #pkgs.cmake
-          #pkgs.autoconf
-          #pkgs.automake
+          pkgs.cmake
+          pkgs.autoconf
+          pkgs.automake
         ];
       };
     });
