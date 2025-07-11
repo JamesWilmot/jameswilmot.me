@@ -1,4 +1,7 @@
-/.direnv
+# .direnv
+
+/.direnv/
+
 
 # build output
 dist/
