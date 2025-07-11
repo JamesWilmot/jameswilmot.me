@@ -16,5 +16,8 @@
     "rehype-external-links": "^3.0.0",
     "remark-gfm": "^4.0.0",
     "remark-smartypants": "^2.0.0"
+  },
+  "engines": {
+    "node": "~20.12.2"
   }
 }
