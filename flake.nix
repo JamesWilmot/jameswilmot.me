@@ -14,34 +14,24 @@
       pkgs = import nixpkgs {
         inherit system;
       };
-      pkgsUnstable = import <nixpkgs-unstable> {
-        inherit system;
-      };
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = [
           # Set the major version of Node.js
-          pkgs.nodejs-18_x
-          pkgs.yarn-berry
-          pkgs.vips
-          pkgs.glibc
+          pkgs.nodejs_22
           pkgs.nodePackages.typescript
           # pkgs.nodePackages.typescript-language-server
 
           # dependencies for grip markdown viewer
-          pkgs.python310
-          pkgs.python310.pkgs.grip
-          pkgs.imagemagick
-
-          # deployment
-          # pkgs.terraform
-          # pkgs.awscli2
-
-          # gpxtools
-          pkgs.cmake
-          pkgs.autoconf
-          pkgs.automake
         ];
+
+        # See: https://github.com/cloudflare/workerd/issues/1482
+          shellHook = ''
+            __patchTarget="./node_modules/wrangler/node_modules/@cloudflare/workerd-linux-64/bin/workerd"
+            if [[ -f "$__patchTarget" ]]; then
+              ${pkgs.patchelf}/bin/patchelf --set-interpreter ${pkgs.glibc}/lib/ld-linux-x86-64.so.2 "$__patchTarget"
+            fi
+          '';
       };
     });
 }

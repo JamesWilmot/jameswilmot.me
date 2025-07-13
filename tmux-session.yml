@@ -5,7 +5,7 @@ windows:
     panes:
       - null
       - shell_command: # pane no. 1
-          - yarn start
+          - npm run dev
   - window_name: git
     layout: even-horizontal
     panes:
