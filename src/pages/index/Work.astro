@@ -2,6 +2,11 @@
 import './Section.scss';
 import './Common.scss';
 import CommunityItem from '@components/items/CommunityItem.astro';
+
+import { Picture } from 'astro:assets';
+
+import FireFighting from "@assets/harvest2023/firefighting.jpg";
+import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
 ---
 
 <section id="professional">
@@ -83,11 +88,17 @@ import CommunityItem from '@components/items/CommunityItem.astro';
             <li>Field bump-in & bump-out</li>
           </ul>
           <figure>
-            <img src="/assets/harvest2023/firefighting.jpg" />
+            <Picture src={FireFighting} format={['avif', 'webp']}
+              title="Quenching embers"
+              alt="Figure standing on back of harvester in field with firefighting hose"
+            />
             <figcaption>Firefighting</figcaption>
          </figure>
           <figure>
-            <img src="/assets/harvest2023/chasing-cropped.jpg" />
+            <Picture src={HeaderChasing} format={['avif', 'webp']}
+              title="Chasing a header at dusk"
+              alt="View from inside a tractor in a field behind a harvester at dusk"
+            />
             <figcaption>Dusk header chasing</figcaption>
          </figure>
        </CommunityItem>

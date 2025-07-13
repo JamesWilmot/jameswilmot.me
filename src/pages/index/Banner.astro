@@ -4,12 +4,18 @@ import PdfLink from '@components/links/pdf.astro';
 import GitHubLink from '@components/links/github.astro';
 import StravaLink from '@components/links/strava.astro';
 
+import JamesPortrait from '@assets/photos/me-high.webp';
+
+import { Picture } from 'astro:assets';
+
 import './Section.scss';
 ---
 <section id="banner">
   <div class="container">
     <div class="me">
-      <img src="/assets/photos/me-high.webp" title="Portrait of James Wilmot in front of blurred greenery"/>
+      <Picture src={JamesPortrait} formats={['avif', 'webp']} 
+         alt="Portrait of James Wilmot in front of blurred greenery"
+         title="Portrait of James Wilmot in front of blurred greenery" />
     </div>
     <div class="copy">
       <h1>Hi, I’m Jimmy</h1>

@@ -5,12 +5,26 @@ import './Common.scss';
 import CommunityItem from '@components/items/CommunityItem.astro';
 import InstagramLink from '@components/links/instagram.astro';
 
-// import { Picture } from 'astro:assets';
+import { Picture } from 'astro:assets';
 
 // import { Slider } from "solid-slider";
 // import "solid-slider/slider.css";
 
-// import ifcPicture from '/assets/ifc2024/timeforchange2.png';
+import MHVTalking from "@assets/mhv/talking-cropped.png";
+import MHVMetalwork from "@assets/mhv/metalwork-cropped.png";
+import VarvaraCropped from "@assets/mhv/varvara-cropped.png";
+import MX5Stands from "@assets/mhv/mx5-cropped.png";
+import Nerdery from "@assets/mhv/nerd-cropped.png";
+import WHS from "@assets/mhv/whs-cropped.png";
+
+import Arbo from "@assets/tw/arbo-cropped.png";
+import LBG from "@assets/tw/lbg-cropped.png";
+import MolongloFord from "@assets/tw/river-cropped.png";
+import BermGrinding from "@assets/tw/james2-cropped.png";
+import DavidCorflute from "@assets/ifc2024/timeforchange2.webp";
+
+import BallControl from "@assets/hockey/controllingBall.png";
+import Premiers from "@assets/hockey/premiersCropped.png";
 ---
 <section id="community">
   <div class="container">
@@ -35,27 +49,45 @@ import InstagramLink from '@components/links/instagram.astro';
         </ul>
         <div class="grid-tiles">
           <figure>
-            <img src="/assets/mhv/talking-cropped.png" />
+            <Picture src={MHVTalking} format={['avif', 'webp']}
+              title="Some collaboration in the workshop"
+              alt="Four people discussion a problem around a workbench"
+            />
             <figcaption>Collaborating in the workshop</figcaption>
           </figure>
           <figure>
-            <img src="/assets/mhv/metalwork-cropped.png" />
+            <Picture src={MHVMetalwork} format={['avif', 'webp']}
+              title="Our metalwork corner"
+              alt="A collection of tools in the Canberra Makerspace metalwork corner"
+            />
             <figcaption>The metalwork corner</figcaption>
           </figure>
           <figure>
-            <img src="/assets/mhv/varvara-cropped.png" />
+            <Picture src={VarvaraCropped} format={['avif', 'webp']}
+              title="Carefully examining spark plugs"
+              alt="Two women examining spark plugs"
+            />
             <figcaption>Examining spark plugs</figcaption>
           </figure>
           <figure>
-            <img src="/assets/mhv/mx5-cropped.png" />
+            <Picture src={MX5Stands} format={['avif', 'webp']}
+              title="No wheels"
+              alt="A car on jackstands outside Canberra Makerspace"
+            />
             <figcaption>Mazda MX-5 (NB) on jackstands</figcaption>
           </figure>
           <figure>
-            <img src="/assets/mhv/nerd-cropped.png" />
+            <Picture src={Nerdery} format={['avif', 'webp']}
+              title="We're always up to computer nerdery"
+              alt="A computer on a table"
+            />
             <figcaption>8-bit computer nerdery</figcaption>
           </figure>
           <figure>
-            <img src="/assets/mhv/whs-cropped.png" />
+            <Picture src={WHS} format={['avif', 'webp']}
+              title="Very safely."
+              alt="Two men standing on a wall mounting an antenna"
+            />
             <figcaption>Safely mounting an antenna</figcaption>
           </figure>
         </div>
@@ -76,19 +108,31 @@ import InstagramLink from '@components/links/instagram.astro';
              </p>
              <div class="grid-tiles">
                <figure>
-                 <img src="/assets/tw/arbo-cropped.png" />
+                  <Picture src={Arbo} format={['avif', 'webp']}
+                    title="We're immensely privileged in Canberra with some excellent riding."
+                    alt="A view downhill in an arboretum with three bikers"
+                  />
                  <figcaption>Climbing into the National Arboretum</figcaption>
                </figure>
                <figure>
-                 <img src="/assets/tw/lbg-cropped.png" />
+                  <Picture src={LBG} format={['avif', 'webp']}
+                    title="There's always bike maintenance"
+                    alt="Collection of bikes on a lake shore with two people working on a bike"
+                  />
                  <figcaption>Bike maintenance under an open sky</figcaption>
                </figure>
                <figure>
-                 <img src="/assets/tw/river-cropped.png" />
+                  <Picture src={MolongloFord} format={['avif', 'webp']}
+                    title="The Mighty, Mighty Molonglo"
+                    alt="Person riding bike crossing a river"
+                  />
                  <figcaption>Fording the mighty Molonglo</figcaption>
                </figure>
                <figure>
-                 <img src="/assets/tw/james2-cropped.png" />
+                  <Picture src={BermGrinding} format={['avif', 'webp']}
+                    title="Busy berm grinding"
+                    alt="Two people on bikes paused while riding a berm"
+                  />
                  <figcaption>A pause from grinding a berm</figcaption>
                </figure>
              </div>
@@ -104,7 +148,7 @@ import InstagramLink from '@components/links/instagram.astro';
         <p>
         <em>
           <a href="https://www.independentsforcanberra.com/">Independents for
-            Canberra</a> is a volunteer-led, community-driven political
+            Canberra</a> was a volunteer-led, community-driven political
           movement that endorses and supports community independents to run for
           office at ACT Elections. </em>
         </p>
@@ -113,12 +157,12 @@ import InstagramLink from '@components/links/instagram.astro';
           Pollard</a>—an independent candidate for the electorate of
         Yerrabi—during the 2024 ACT Legislative Assembly election campaign</p>
         <figure>
-          <img src="/assets/ifc2024/timeforchange2.webp" />
+          <Picture src={DavidCorflute} format={['avif', 'webp']}
+            title="So, so close"
+            alt="Political campaign corflute on side of road"
+          />
           <figcaption>An example of my handiwork</figcaption>
         </figure>
-        <!--
-          <Picture src={ifcPicture} formats={['avif', 'webp']} alt="A description of my image." /> 
-        -->
       </CommunityItem>
       <CommunityItem 
              place="Central Hockey Club"
@@ -127,16 +171,19 @@ import InstagramLink from '@components/links/instagram.astro';
              location="Lyneham, Tuggeranong & Jerrabomberra"
              >
         <figure>
-          <img src="/assets/hockey/controllingBall.png" />
+          <Picture src={BallControl} format={['avif', 'webp']}
+            title="Not for long."
+            alt="Field hockey players on field, I've got possession of the ball"
+          />
           <figcaption>Maintaining possession during the grand final</figcaption>
         </figure>
         <figure>
-          <img src="/assets/hockey/premiersCropped.png" />
+          <Picture src={Premiers} format={['avif', 'webp']}
+            title="First season back after well over a decade away"
+            alt="Group of men on a hockey field standing around a 2024 Premiers sign"
+          />
           <figcaption>SL5 Premiers for Season 2024</figcaption>
         </figure>
-        <!--
-          <Picture src={ifcPicture} formats={['avif', 'webp']} alt="A description of my image." /> 
-        -->
       </CommunityItem>
       <CommunityItem 
              place="Y's-buys"
