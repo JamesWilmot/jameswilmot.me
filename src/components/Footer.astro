@@ -1,13 +1,21 @@
+---
+import GitHubLink from './links/github.astro';
+---
+
+
 <footer>
   <span>
-    &copy; {new Date().getFullYear()} Your Blog.
-    Powered by <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>.
-    Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener">Maxi Ferreira</a>.
+    &copy; {new Date().getFullYear()} James Wilmot. 
+    <GitHubLink href="https://github.com/JamesWilmot/jameswilmot.me">JamesWilmot/jameswilmot.me</GitHubLink>
+      <br />
+    Powered by <a href="https://astro.build" rel="noopener">Astro</a>.
+    Derived from a template by <a href="https://www.twitter.com/Charca" rel="noopener">Maxi Ferreira</a>.
   </span>
 </footer>
 
 <style>
   footer {
+    container-type: inline-size;
     color: var(--text-secondary);
     font-size: .8em;
     margin: 1em auto;
@@ -15,5 +23,8 @@
     padding: 1em 2em;
     text-align: center;
     width: 100%;
+    @container (width < 300px ) {
+    }
   }
+
 </style>

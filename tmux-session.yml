@@ -1,0 +1,15 @@
+session_name: jameswilmotme
+windows:
+  - window_name: utils
+    layout: even-horizontal
+    panes:
+      - null
+      - shell_command: # pane no. 1
+          - npm run dev
+  - window_name: git
+    layout: even-horizontal
+    panes:
+      - shell_command: # pane no. 1
+          - tig
+      - shell_command: # pane no. 1
+          - git status

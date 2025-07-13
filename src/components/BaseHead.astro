@@ -1,25 +1,36 @@
 ---
-import { ClientRouter } from 'astro:transitions'
+import { ViewTransitions } from 'astro:transitions'
 import '../styles/fonts.css'
 import '../styles/global.css'
 
 export interface Props {
   title: string
   description: string
-  permalink: string
+  current: string
 }
 
-const { title, description, permalink } = Astro.props
-const socialUrl = Astro.site.href + 'assets/social.png'
+const { title, description, current } = Astro.props
+
+let baseUrl = ""
+
+if (Astro.site) {
+  baseUrl = Astro.site.href
+} else {
+  baseUrl = "http://localhost:4321/"
+}
+
+const permalink = baseUrl + current
+
+const socialUrl = baseUrl + 'assets/social.png'
 ---
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<!-- <link rel="icon" type="image/x-icon" href="/favicon.ico" /> -->
 
 <!-- Primary Meta Tags -->
-<title>{title}</title>
+<title>{title} | James Wilmot</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
@@ -37,18 +48,6 @@ const socialUrl = Astro.site.href + 'assets/social.png'
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={socialUrl} />
 
-<ClientRouter />
+<ViewTransitions />
 
 <!-- This is intentionally inlined to avoid FOUC -->
-<script is:inline>
-  const root = document.documentElement
-  const theme = localStorage.getItem('theme')
-  if (
-    theme === 'dark' ||
-    (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    root.classList.add('theme-dark')
-  } else {
-    root.classList.remove('theme-dark')
-  }
-</script>

@@ -7,10 +7,25 @@ import rehypeExternalLinks from 'rehype-external-links'
 
 import cloudflare from '@astrojs/cloudflare';
 
+import solidJs from '@astrojs/solid-js';
+
+import favicons from 'astro-favicons';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-template.netlify.app',
-  integrations: [mdx(), svelte()],
+  site: 'https://jameswilmot.me',
+  integrations: [
+    mdx(), 
+    solidJs(), 
+    svelte(), 
+    favicons({
+      input: {
+        favicons: [
+          "public/favicon.jpg",
+        ], 
+      },
+    })
+  ],
 
   markdown: {
     shikiConfig: {
