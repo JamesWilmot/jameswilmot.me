@@ -75,6 +75,42 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
           </p>
        </CommunityItem>
       <CommunityItem 
+             place="Biotext"
+             position="Web developer"
+             humanDates="Jul 2017–Jan 2018"
+             location="Canberra"
+             >
+          <p>
+          <em><a href="https://www.biotext.com.au/">Biotext</a> are experts in writing, editing, publishing and design who specialise in the understanding and publication of complex information.</em>
+          </p>
+          <p>Collaborated with in-house designers and editors to design and build <a href="https://remediationaustralasia.com.au/">Remediation Australasia</a>, reflecting the print publication's style and information architecture</p>
+       </CommunityItem>
+      <CommunityItem 
+             place="Publicis Front Foot"
+             position="Senior developer"
+             humanDates="Sep 2015–Mar 2016"
+             location="Sydney"
+             >
+        <p>Senior Developer on gc2018.com website for the Gold Coast
+        Commonwealth Games</p>
+        <p>Lead team which scaled to 5 developers, liased with senior GOLDOC stakeholders, gitflow release management and feature integration
+        </p>
+       </CommunityItem>
+      <CommunityItem 
+             place="This Little Duck"
+             position="Drupal developer"
+             humanDates="Sep 2014–Mar 2015"
+             location="Sydney"
+             >
+         <p><em>
+         This Little Duck was a software development studio based in Sydney
+         </em></p>
+         <p>Worked on (now superseded) UNSW Newsroom and the UNSW Art & Design website
+         </p>
+       </CommunityItem>
+    </div>
+    <aside>
+      <CommunityItem 
              place="Dumossa"
              position="Harvest operations hand"
              humanDates="2020–23"
@@ -103,17 +139,6 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
          </figure>
        </CommunityItem>
       <CommunityItem 
-             place="Biotext"
-             position="Web developer"
-             humanDates="Jul 2017–Jan 2018"
-             location="Canberra"
-             >
-          <p>
-          <em><a href="https://www.biotext.com.au/">Biotext</a> are experts in writing, editing, publishing and design who specialise in the understanding and publication of complex information.</em>
-          </p>
-          <p>Collaborated with in-house designers and editors to design and build <a href="https://remediationaustralasia.com.au/">Remediation Australasia</a>, reflecting the print publication's style and information architecture</p>
-       </CommunityItem>
-      <CommunityItem 
              place="UNSW Canberra"
              position="Drupal developer"
              humanDates="Apr 2019–Mar 2020"
@@ -132,17 +157,6 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
             MTP Services is a Canberra based company specialising in IT contracting and recruitment, staﬀ augmentation and project delivery
          </em></p>
          <p>Upgrade of Plant Health Australia's AusPestCheck biosecurity webapp</p>
-       </CommunityItem>
-      <CommunityItem 
-             place="Publicis Front Foot"
-             position="Senior developer"
-             humanDates="Sep 2015–Mar 2016"
-             location="Sydney"
-             >
-        <p>Senior Developer on gc2018.com website for the Gold Coast
-        Commonwealth Games</p>
-        <p>Lead team which scaled to 5 developers, liased with senior GOLDOC stakeholders, gitflow release management and feature integration
-        </p>
        </CommunityItem>
       <CommunityItem 
              place="Star Entertainment"
@@ -167,18 +181,6 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
              >
          <p>
            Maintenance, content and improvement of previous nsw.gov.au Drupal website
-         </p>
-       </CommunityItem>
-      <CommunityItem 
-             place="This Little Duck"
-             position="Drupal developer"
-             humanDates="Sep 2014–Mar 2015"
-             location="Sydney"
-             >
-         <p><em>
-         This Little Duck was a software development studio based in Sydney
-         </em></p>
-         <p>Worked on (now superseded) UNSW Newsroom and the UNSW Art & Design website
          </p>
        </CommunityItem>
       <CommunityItem 
@@ -307,8 +309,6 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
                <li>Tomato harvesting</li>
           </ul>
        </CommunityItem>
-    </div>
-    <aside>
     </aside>
   </div>
 </section>
@@ -320,29 +320,30 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
       margin-bottom: 0.25em;
       font-style: italic;
     }
-
     .container {
+      --gap: 4ch;
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
       .main {
-        columns: 4;
+        flex: 3;
+      }
+      aside {
+        flex: 4;
+        columns: 2;
         column-gap: 4ch;
       }
     }
-    @container (width < 1100px) and (width > 850px) {
+
+    @container (width < 1000px) {
       .container {
-        .main {
-          columns: 3;
+        flex-direction: column;
+        aside {
           column-gap: 2ch;
         }
       }
     }
-    @container (width < 850px) {
-      .container {
-        .main {
-          columns: 2;
-          column-gap: 2ch;
-        }
-      }
-    }
+
   }
 
 </style>
