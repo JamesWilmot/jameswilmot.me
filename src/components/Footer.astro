@@ -1,15 +1,18 @@
 ---
 import GitHubLink from './links/github.astro';
+
+const buildDate = new Date();
 ---
 
 
 <footer>
   <span>
-    &copy; {new Date().getFullYear()} James Wilmot. 
+    &copy; {buildDate.getFullYear()} James Wilmot. 
     <GitHubLink href="https://github.com/JamesWilmot/jameswilmot.me">JamesWilmot/jameswilmot.me</GitHubLink>
       <br />
     Powered by <a href="https://astro.build" rel="noopener">Astro</a>.
-    Derived from a template by <a href="https://www.twitter.com/Charca" rel="noopener">Maxi Ferreira</a>.
+    Derived from a template by <a href="https://www.twitter.com/Charca" rel="noopener">Maxi Ferreira</a>. <br /> <br />
+    Last updated: <time datetime={buildDate}>{buildDate}</time>
   </span>
 </footer>
 
