@@ -1,8 +1,12 @@
 import { defineConfig } from 'astro/config'
 import svelte from '@astrojs/svelte'
 import mdx from '@astrojs/mdx'
+
+import { remarkModifiedTime } from './src/components/utilities/remark-modified-time.mjs';
+import { remarkAnyModifiedTime } from './src/components/utilities/remark-any-modified-time.mjs';
 import remarkGfm from 'remark-gfm'
 import remarkSmartypants from 'remark-smartypants'
+
 import rehypeExternalLinks from 'rehype-external-links'
 
 import cloudflare from '@astrojs/cloudflare';
@@ -31,7 +35,7 @@ export default defineConfig({
     shikiConfig: {
       theme: 'nord',
     },
-    remarkPlugins: [remarkGfm, remarkSmartypants],
+    remarkPlugins: [remarkModifiedTime, remarkGfm, remarkSmartypants],
     rehypePlugins: [
       [
         rehypeExternalLinks,
