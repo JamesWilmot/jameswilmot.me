@@ -1,18 +1,27 @@
 ---
 import GitHubLink from './links/github.astro';
+import dayjs from 'dayjs';
 
-const buildDate = new Date();
+import advancedFormat from 'dayjs/plugin/advancedFormat';
+
+dayjs.extend(advancedFormat);
+
+
+const buildDate = dayjs()
+
+
+
 ---
 
 
 <footer>
   <span>
-    &copy; {buildDate.getFullYear()} James Wilmot. 
+    &copy; {buildDate.format("YYYY")} James Wilmot. 
     <GitHubLink href="https://github.com/JamesWilmot/jameswilmot.me">JamesWilmot/jameswilmot.me</GitHubLink>
       <br />
     Powered by <a href="https://astro.build" rel="noopener">Astro</a>.
     Derived from a template by <a href="https://www.twitter.com/Charca" rel="noopener">Maxi Ferreira</a>. <br /> <br />
-    Last updated: <time datetime={buildDate}>{buildDate}</time>
+    <i>Last updated:</i> <time datetime={buildDate}>{buildDate.format("dddd, Do MMMM YYYY")}</time>
   </span>
 </footer>
 
