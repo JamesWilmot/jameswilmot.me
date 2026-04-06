@@ -1,0 +1,241 @@
+---
+import BasicLayout from '@layouts/BasicLayout.astro';
+import BaseHead from '../components/BaseHead.astro';
+
+import NowItem from '@components/items/NowItem.astro';
+
+const title = "Now";
+const description = "";
+const current = "/now";
+
+import dayjs from 'dayjs';
+
+import advancedFormat from 'dayjs/plugin/advancedFormat';
+
+dayjs.extend(advancedFormat);
+
+
+const buildDate = dayjs()
+
+---
+<html lang="en">
+<head>
+  <BaseHead title={title} description={description} current={current} />
+</head>
+<body>
+  <div class="layout">
+    <main>
+      <h1>Now</h1>
+      <figure>
+        <blockquote> 
+          Personal websites often have a link that says “now” that
+          tells you what this person is focused on at this point in their life.
+          It’s called a “now page”.
+        </blockquote>
+        <figcaption>
+          From <a href="https://nownownow.com/about">nownownow.com/about</a>. You can browse a collection of 'now' pages here: 
+          <a href="https://nownownow.com/">nownownow.com</a>.
+        </figcaption>
+      </figure>
+      <i>Last updated:</i> <time datetime={buildDate}>{buildDate.format("dddd, Do MMMM YYYY")}</time>
+    </main>
+    <aside>
+      <h1>Goals and aspirations</h1>
+      <h2>Adventure</h2>
+      <ul>
+        <li>
+          <NowItem>
+            Work a summer in Antarctica with the <a href="https://www.antarctica.gov.au/">Australian Antarctica Program</a>
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Sail on the 
+            <a href="https://www.barkeuropa.com/en">Bark Europa</a>
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Spend a year sailing
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Cycle tour from Prudhow Bay, Alaska to Ushuaia, Argentina
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Cycle tour the UK and Europe
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Cycle tour the <a href="https://nationaltrail.com.au/">National Trail</a>
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Finish <a href="https://www.touraotearoa.nz/p/home.html">Tour Aotearoa</a>
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Learn how to scuba dive
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Get into ski touring
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Live overseas for a few years
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Walk a camino
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Walk <a href="https://www.teararoa.org.nz/">Te Araroa</a>
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Become a member of <a href="https://snowyvale.org/">Snowy Vale</a>
+          </NowItem>
+        </li>
+      </ul>
+      <h2>Corporeal form</h2>
+      <ul>
+        <li>
+          <NowItem>
+            Run a sub-20min 5km
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Run a sub-100min half-marathon
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Run a sub-45min 10km
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Run a marathon
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Run an ultra-marathon
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Fix tight hamstrings and hips
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Become functionally strong
+          </NowItem>
+        </li>
+      </ul>
+
+      <h2>Life</h2>
+      <ul>
+        <li>
+          <NowItem>
+            Learn how to make sourdough
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Learn how to make kombucha
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Learn how to make yoghurt
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Learn how to write
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Learn another language
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Some poor, unsuspecting woman is going to get lumped with me 🤣 
+          </NowItem>
+        </li>
+        <li>
+          <NowItem>
+            Make this life free and beautiful, make this life a wonderful adventure
+          </NowItem>
+        </li>
+      </ul>
+      
+
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <NowItem>
+            Finish Toyota Coaster campervan conversion
+          </NowItem>
+        </li>
+      </ul>
+    </aside>
+
+  </div>
+</body>
+</html>
+
+<style lang="scss">
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+aside h1 {
+  font-size: 1.25em;
+  margin: 0.5em 0;
+}
+h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 1ch;
+  margin-top: 0;
+}
+
+li {
+  margin: 0;
+}
+
+blockquote {
+  font-size: 1em;
+}
+
+figcaption {
+  font-size: 1em;
+}
+</style>
+
+

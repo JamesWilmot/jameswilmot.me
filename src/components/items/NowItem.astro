@@ -1,0 +1,14 @@
+---
+const { place, position, humanDates, location } = Astro.props;
+
+import Location from '@components/links/location.astro';
+import DateTime from '@components/links/datetime.astro';
+---
+
+<label>
+  <input disabled type="checkbox" />
+  <slot />
+</label>
+
+<style lang="scss">
+</style>
