@@ -7,6 +7,8 @@ import { Picture } from 'astro:assets';
 
 import FireFighting from "@assets/harvest2023/firefighting.jpg";
 import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
+
+import UriarraCrossingBus from "@assets/cdc/uriarra-west.jpg";
 ---
 
 <section id="professional">
@@ -129,8 +131,16 @@ import HeaderChasing from "@assets/harvest2023/chasing-cropped.jpg";
         <ul>
           <li>Charter coach services</li>
           <li>Route services</li>
+          <li>School services</li>
           <li>Special needs transport</li>
         </ul>
+        <figure>
+          <Picture src={UriarraCrossingBus} format={['avif', 'webp']}
+            title="Slightly objectionably parked."
+            alt="Bus parked on access road to Uriarra West picnic area."
+          />
+          <figcaption></figcaption>
+       </figure>
       </CommunityItem>
       <CommunityItem 
              place="Dumossa"
